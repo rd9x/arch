@@ -1,10 +1,13 @@
 #
 # ~/.bashrc
 #
+
+## Run on start
 neofetch
 
 ## Aliases
-alias ls='ls --color=auto'
+alias ls='ls --color=auto'       # default autocoloring
+alias lsa='ls -A'                # show hidden dotfiles
 alias ll='ls -lav --ignore=..'   # show long listing of all except ".."
 alias l='ls -lav --ignore=.?*'   # show long listing but no hidden dotfiles except "."
 
