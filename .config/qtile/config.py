@@ -11,12 +11,13 @@ terminal = "alacritty"
 
 keys = [
     Key([mod], "space", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
+    Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
     Key([mod], "q", lazy.window.kill(), desc="Kill focused window"),
     Key([mod], "t", lazy.window.toggle_floating(), desc="Toggle floating on the focused window"),
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     # Toggle between different layouts
-    Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
+    Key([mod], "x", lazy.next_layout(), desc="Toggle between layouts"),
     # Switch between windows
     Key([mod], "h", lazy.layout.left(), desc="Move focus to left"),
     Key([mod], "l", lazy.layout.right(), desc="Move focus to right"),
@@ -36,7 +37,6 @@ keys = [
     Key([mod], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
     # Stack windows
     Key([mod, "shift"], "Return", lazy.layout.toggle_split(), desc="Stacks windows"),
-    Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
 ]
 
 groups = [Group(i) for i in "123456789"]
@@ -62,14 +62,14 @@ for i in groups:
     )
 
 layouts = [
-    layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"], border_width=4),
-    layout.Max(),
+    layout.Columns(border_normal="#1870df", border_focus="#ffcc44", border_focus_stack=["#008f39", "#7d9e7f"], border_width=2, margin=6),
+    layout.Max(margin=12, border_focus="#ffcc44", border_width=2),
 ]
 
 widget_defaults = dict(
     font="sans",
-    fontsize=12,
-    padding=3,
+    fontsize=14,
+    padding=12,
 )
 extension_defaults = widget_defaults.copy()
 
