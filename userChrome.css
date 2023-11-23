@@ -1,0 +1,12 @@
+/* Firefox Custom CSS
+1. Open your profile folder; Go to 'about:support' and look at the line that says "Profile folder"
+2. Put this file in ${PROFILE}/chrome/
+3. Toggle the relevant about:config flags; 'toolkit.legacyUserProfileCustomizations.stylesheets' */
+
+#TabsToolbar
+{
+    visibility: collapse;
+}
+#sidebar-header {
+     visibility: collapse;  
+}
