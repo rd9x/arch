@@ -7,6 +7,12 @@
 | Terminal | Alacritty | pacman -S alacritty |
 | Theme | Adwaita-dark | pacman -S gnome-themes-extra |
 
+# Disable Mouse Acceleration 
+
+xinput list <br>
+xinput list-props 'id' <br>
+xinput set-prop 'id' 'libinput Accel Profile Enabled' 0, 1, 0 
+
 # NVIDIA
 
 Driver: https://www.nvidia.com/Download/index.aspx?lang=en-us <br>
