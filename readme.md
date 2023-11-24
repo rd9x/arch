@@ -9,4 +9,5 @@
 
 # NVIDIA
 
+Driver: https://www.nvidia.com/Download/index.aspx?lang=en-us
 GUI: nvidia-settings
