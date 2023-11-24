@@ -6,3 +6,7 @@
 | Image - Viewer | feh | pacman -S feh |
 | Terminal | Alacritty | pacman -S alacritty |
 | Theme | Adwaita-dark | pacman -S gnome-themes-extra |
+
+# NVIDIA
+
+GUI: nvidia-settings
