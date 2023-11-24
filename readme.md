@@ -13,6 +13,8 @@ cp .config/picom/picom.conf ~/.config/picom/picom.conf
 cp .config/qtile/config.py ~/.config/qtile/config.py && cp .config/qtile/autostart.sh ~/.config/qtile/autostart.sh
 chmod +x ~/.config/qtile/autostart.sh
 cp .images/* ~/Pictures
+
+python -m py_compile ~/.config/qtile/config.py
 ```
 
 Installs the following programs and copies their configuration files:
