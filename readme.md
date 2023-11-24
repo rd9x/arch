@@ -13,7 +13,7 @@ cp .config/picom/picom.conf ~/.config/picom/picom.conf
 cp .config/qtile/config.py ~/.config/qtile/config.py && cp .config/qtile/autostart.sh ~/.config/qtile/autostart.sh
 chmod +x ~/.config/qtile/autostart.sh
 cp .images/* ~/Pictures
-
+nitrogen ~/Pictures && nitrogen --restore
 python -m py_compile ~/.config/qtile/config.py
 ```
 
