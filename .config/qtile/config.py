@@ -62,7 +62,7 @@ for i in groups:
     )
 
 layouts = [
-    layout.Columns(border_normal="#1870df", border_focus="#ffcc44", border_focus_stack=["#008f39", "#7d9e7f"], border_width=2, margin=6),
+    layout.Columns(border_normal="#1870df", border_focus="#ffcc44", border_focus_stack=["#008f39", "#7d9e7f"], border_width=2, margin=8),
     layout.Max(margin=12, border_focus="#ffcc44", border_width=2),
 ]
 
@@ -77,30 +77,28 @@ screens = [
     Screen(
         top=bar.Bar(
             [
-                widget.CurrentLayout(),
-                widget.GroupBox(),
+                widget.GroupBox(highlight_method='line'),
                 widget.Prompt(),
-                widget.WindowName(),
+                widget.WindowTabs(),
                 widget.Chord(
                     chords_colors={
                         "launch": ("#ff0000", "#ffffff"),
                     },
                     name_transform=lambda name: name.upper(),
                 ),
-                widget.TextBox("default config", name="default"),
-                widget.TextBox("Press &lt;M-r&gt; to spawn", foreground="#d75f5f"),
-                # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
-                # widget.StatusNotifier(),
+                widget.MemoryGraph(),
+                widget.CPUGraph(),
+                widget.CPU(),
                 widget.Systray(),
+                widget.Volume(),
                 widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
                 widget.QuickExit(),
             ],
-            24,
-            # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
-            # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
+            36,
+	    background="#2e3440",
+	    margin=[10, 10, 4, 10],
         ),
         # You can uncomment this variable if you see that on X11 floating resize/moving is laggy
-        # By default we handle these events delayed to already improve performance, however your system might still be struggling
         # This variable is set to None (no cap) by default, but you can set it to 60 to indicate that you limit it to 60 events per second
         # x11_drag_polling_rate = 60,
     ),
