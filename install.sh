@@ -1,5 +1,5 @@
 #!/bin/sh
-pacman -S qtile alacritty picom nitrogen neofetch gnome-themes-extra nvidia-settings thunar maim feh p7zip nerd-fonts starship
+pacman -S qtile alacritty picom nitrogen neofetch gnome-themes-extra nvidia-settings thunar maim feh p7zip nerd-fonts starship keepassxc
 cp .bashrc ~/.bashrc && cp .bash_profile ~/.bash_profile
 cp .gtkrc-2.0 ~/.gtkrc-2.0
 cp .xinitrc ~/.xinitrc
