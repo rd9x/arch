@@ -4,6 +4,7 @@
 
 ## Run on start
 neofetch
+eval "$(starship init bash)"
 
 ## Aliases
 alias ls='ls --color=auto'       # default autocoloring
