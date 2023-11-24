@@ -1,12 +1,33 @@
+# install.sh
+
+```
+#!/bin/sh
+pacman -S qtile alacritty picom nitrogen neofetch gnome-themes-extra nvidia-settings thunar maim feh p7zip
+cp .bashrc ~/.bashrc && cp .bash_profile ~/.bash_profile
+cp .gtkrc-2.0 ~/.gtkrc-2.0
+cp .xinitrc ~/.xinitrc
+mkdir -p ~/.config/alacritty && mkdir -p ~/.config/gtk-3.0 && mkdir -p ~/.config/picom && mkdir -p ~/.config/qtile
+cp .config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
+cp .config/gtk-3.0/settings.ini ~/.config/gtk-3.0/settings.ini
+cp .config/picom/picom.conf ~/.config/picom/picom.conf
+cp .config/qtile/config.py ~/.config/qtile/config.py
+```
+
+Installs the following programs and copies their configuration files:
+
 | Type | Name | Installation |
 |----------|-----------|---------------------|
 | Compositor | picom | pacman -S picom |
-| FileManager | thunar | pacman -S thunar |
+| FileArchiver | 7zip | pacman -S p7zip |
+| FileManager | Thunar | pacman -S thunar |
 | Image - Background | nitrogen | pacman -S nitrogen |
 | Image - Capture | maim | pacman -S maim |
 | Image - Viewer | feh | pacman -S feh |
+| Nvidia | Nvidia Settings | pacman -S nvidia-settings |
+| PasswordManager | KeepassXC | pacman -S keepassxc |
 | Terminal | Alacritty | pacman -S alacritty |
 | Theme | Adwaita-dark | pacman -S gnome-themes-extra |
+| WindowManager | Qtile | pacman -S qtile |
 
 # Disable Mouse Acceleration 
 
