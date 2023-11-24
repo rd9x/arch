@@ -12,6 +12,7 @@ cp .config/gtk-3.0/settings.ini ~/.config/gtk-3.0/settings.ini
 cp .config/picom/picom.conf ~/.config/picom/picom.conf
 cp .config/qtile/config.py ~/.config/qtile/config.py && cp .config/qtile/autostart.sh ~/.config/qtile/autostart.sh
 chmod +x ~/.config/qtile/autostart.sh
+cp .images/* ~/Pictures
 ```
 
 Installs the following programs and copies their configuration files:
