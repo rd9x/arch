@@ -2,7 +2,7 @@
 
 ```
 #!/bin/sh
-pacman -S qtile alacritty picom nitrogen neofetch gnome-themes-extra nvidia-settings thunar maim feh p7zip
+pacman -S qtile alacritty picom nitrogen neofetch gnome-themes-extra nvidia-settings thunar maim feh p7zip starship
 cp .bashrc ~/.bashrc && cp .bash_profile ~/.bash_profile
 cp .gtkrc-2.0 ~/.gtkrc-2.0
 cp .xinitrc ~/.xinitrc
@@ -26,6 +26,7 @@ Installs the following programs and copies their configuration files:
 | Image - Viewer | feh | pacman -S feh |
 | Nvidia | Nvidia Settings | pacman -S nvidia-settings |
 | PasswordManager | KeepassXC | pacman -S keepassxc |
+| Shell | Starship | pacman -S starship |
 | Terminal | Alacritty | pacman -S alacritty |
 | Theme | Adwaita-dark | pacman -S gnome-themes-extra |
 | WindowManager | Qtile | pacman -S qtile |
