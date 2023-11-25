@@ -30,6 +30,3 @@ xinput set-prop 'id' 'libinput Accel Profile Enabled' 0, 1, 0
 
 Driver: https://www.nvidia.com/Download/index.aspx?lang=en-us <br>
 GUI: nvidia-settings
-
-# Create Windows USB
-https://github.com/WoeUSB/WoeUSB-ng
