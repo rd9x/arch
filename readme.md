@@ -16,6 +16,8 @@ Installs the following programs and copies their configuration files:
 | Shell | Starship | pacman -S starship |
 | Terminal | Alacritty | pacman -S alacritty |
 | Theme | Adwaita-dark | pacman -S gnome-themes-extra |
+| Video - Player | ffplay | part of ffmpeg |
+| Video - Recorder | ffmpeg | pacman -S ffmpeg |
 | WindowManager | Qtile | pacman -S qtile |
 
 # Disable Mouse Acceleration 
