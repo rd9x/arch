@@ -30,3 +30,5 @@ xinput set-prop 'id' 'libinput Accel Profile Enabled' 0, 1, 0
 
 Driver: https://www.nvidia.com/Download/index.aspx?lang=en-us <br>
 GUI: nvidia-settings
+
+![arch](https://github.com/Rudi9x/arch/assets/134175623/ae97fcb6-2ce8-4bb4-8325-bd72e1d30210)
