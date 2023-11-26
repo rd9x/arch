@@ -30,6 +30,11 @@ xinput list <br>
 xinput list-props 'id' <br>
 xinput set-prop 'id' 'libinput Accel Profile Enabled' 0, 1, 0 
 
+# Record Video / Screenshot
+
+ffrecord {ffmpeg -s 3440x1440 -r 60 -f x11grab -i :0.0 ~/Videos/output.mp4}
+maim -o -u output.jpeg
+
 # NVIDIA
 
 Driver: https://www.nvidia.com/Download/index.aspx?lang=en-us <br>
