@@ -32,7 +32,8 @@ xinput set-prop 'id' 'libinput Accel Profile Enabled' 0, 1, 0
 
 # Record Video / Screenshot
 
-ffrecord {ffmpeg -s 3440x1440 -r 60 -f x11grab -i :0.0 ~/Videos/output.mp4} <br>
+ffrecord (Alias) <br>
+-> ffmpeg -s 3440x1440 -r 60 -f x11grab -i :0.0 ~/Videos/output.mp4 <br>
 maim -o -u output.jpeg
 
 # NVIDIA
