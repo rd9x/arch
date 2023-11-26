@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Installing packages
-pacman -S qtile alacritty picom nitrogen neofetch gnome-themes-extra nvidia-settings thunar maim feh p7zip nerd-fonts starship keepassxc discord pulseaudio
+pacman -S qtile alacritty picom nitrogen neofetch gnome-themes-extra nvidia-settings thunar maim feh p7zip nerd-fonts starship keepassxc discord pulseaudio steam
 
 # Copying the config files
 cp .bashrc ~/.bashrc && cp .bash_profile ~/.bash_profile
