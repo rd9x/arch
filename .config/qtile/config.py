@@ -68,7 +68,7 @@ groups = [
     Group("󰖟", layout="max"),
     Group("󰓓", spawn="steam"),
     Group("󰙯", spawn=["discord", "teamspeak"]),
-    Group("", spawn=["keepassxc", "thunar"]),
+    Group("", spawn="keepassxc"),
 ]
 
 layouts = [
