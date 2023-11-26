@@ -16,6 +16,7 @@ Installs the following programs and copies their configuration files:
 | Shell | Starship | pacman -S starship |
 | Software - PWManager | KeepassXC | pacman -S keepassxc |
 | Software - Discord | Discord | pacman -S discord |
+| Software - Steam | Steam | pacman -S steam |
 | Software - Teamspeak | Teamspeak 5 | yay -S teamspeak |
 | Terminal | Alacritty | pacman -S alacritty |
 | Theme | Adwaita-dark | pacman -S gnome-themes-extra |
