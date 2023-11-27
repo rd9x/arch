@@ -35,6 +35,7 @@ keys = [
     Key([mod], "s", lazy.spawn("steam"), desc="Launch steam"),
     Key([mod], "d", lazy.spawn("discord"), desc="Launch discord"),
     Key([mod], "b", lazy.spawn("firefox"), desc="Launch firefox"),
+    Key([mod], "m", lazy.spawn("pavucontrol"), desc="Launch audio mixer"),
 
     # Layout hotkeys
 
