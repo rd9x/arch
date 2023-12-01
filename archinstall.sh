@@ -11,8 +11,9 @@ cp .xinitrc ~/.xinitrc
 # install: Qtile(WindowManager), Picom(Compositor), PipeWire-Pulse(Audio), Nitrogen(Background), Python
 yes | sudo pacman -S qtile picom nitrogen python
 sudo pacman -S pipewire-pulse 
-# Creating directories and copying the Picom and Qtile configs, autostart script
-mkdir -p ~/.config/picom && mkdir -p ~/.config/qtile
+# Creating directories and copying the Picom, Qtile and GTK configs, autostart script
+mkdir -p ~/.config/picom && mkdir -p ~/.config/qtile && mkdir
+#cp .gtkrc-2.0 ~/.gtkrc-2.0
 cp .config/picom/picom.conf ~/.config/picom/picom.conf
 cp .config/qtile/config.py ~/.config/qtile/config.py
 cp .config/qtile/autostart.sh ~/.config/qtile/autostart.sh
