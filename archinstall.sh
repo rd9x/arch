@@ -12,7 +12,7 @@ cp .xinitrc ~/.xinitrc
 yes | sudo pacman -S qtile picom nitrogen python
 sudo pacman -S pipewire-pulse 
 # Creating directories and copying the Picom, Qtile and GTK configs, autostart script
-mkdir -p ~/.config/picom && mkdir -p ~/.config/qtile && mkdir
+mkdir -p ~/.config/picom && mkdir -p ~/.config/qtile
 #cp .gtkrc-2.0 ~/.gtkrc-2.0
 cp .config/picom/picom.conf ~/.config/picom/picom.conf
 cp .config/qtile/config.py ~/.config/qtile/config.py
