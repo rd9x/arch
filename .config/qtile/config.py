@@ -1,11 +1,10 @@
 import os
 import subprocess
-from libqtile import bar, layout, widget, hook
+from libqtile import bar, layout, hook, widget
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.core.manager import Qtile
 from libqtile.dgroups import simple_key_binder
-
 
 # ----------------------------
 # -------- Hotkeys -----------
@@ -66,14 +65,14 @@ keys = [
 # ----------------------------
 
 groups = [
-    Group("󰖟", layout="max"),
-    Group("󰓓", spawn="steam"),
-    Group("󰙯", spawn=["discord", "teamspeak"]),
-    Group("", spawn="keepassxc"),
+    Group("1"),
+    Group("2"),
+    Group("3", spawn=["discord", "teamspeak"]),
+    Group("4", spawn=["keepassxc", "thunderbird"]),
 ]
 
 layouts = [
-    layout.Columns(border_normal="#1870df", border_focus="#ffcc44", border_focus_stack=["#008f39", "#7d9e7f"], border_width=2, margin=8),
+    layout.Columns(border_normal="#1870df", border_focus="#ffcc44", border_focus_stack=["#008f39", "#7d9e7f"], border_width=2, margin=12),
     layout.Max(margin=12, border_focus="#ffcc44", border_width=2),
 ]
 
@@ -118,16 +117,11 @@ screens = [
                 widget.WindowTabs(),
 
 		widget.Spacer(length=50),
-		widget.NvidiaSensors(format='GPU  |  {temp}°C', threshold=75, foreground_alert='ff6000'),
+		widget.NvidiaSensors(format='GPU | {temp}°C', threshold=75, foreground_alert='ff6000'),
 		widget.Spacer(length=15),
-                widget.ThermalSensor(format='CPU  |  {temp:.0f}{unit}'),
-                widget.CPUGraph(),
+                widget.ThermalSensor(format='CPU | {temp:.0f}{unit}'),
 		widget.Spacer(length=15),
-                widget.Memory(format='RAM  | {MemUsed: .0f}{mm}/{MemTotal: .0f}{mm}', measure_mem='G'),
-                widget.MemoryGraph(),
-#		 widget.Spacer(length=15),
-#                widget.Memory(format='SWAP | {SwapUsed: .0f}{ms}/{SwapTotal: .0f}{ms}'),
-#                widget.SwapGraph(),
+                widget.Memory(format='RAM |{MemUsed: .0f}{mm}/{MemTotal: .0f}{mm}', measure_mem='G'),
 		widget.Spacer(length=50),	
 
                 widget.Systray(icon_size=22),
@@ -137,7 +131,8 @@ screens = [
             ],
             36,
 	    background="#2e3440",
-	    margin=[10, 10, 4, 10],
+	    margin=[12, 12, 6, 12],
+	    border_radius=0,
         ),
         # You can uncomment this variable if you see that on X11 floating resize/moving is laggy
         # x11_drag_polling_rate = 60,
