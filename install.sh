@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Installing packages
-pacman -S qtile alacritty picom nitrogen neofetch gnome-themes-extra nvidia-settings thunar maim feh p7zip nerd-fonts starship keepassxc discord pulseaudio steam
+pacman -S qtile pipewire-pulse arc-gtk-theme picom nitrogen alacritty nerd-fonts starship neofetch nvidia-settings maim feh p7zip 
 
 # Copying the config files
 cp .bashrc ~/.bashrc && cp .bash_profile ~/.bash_profile
@@ -20,3 +20,6 @@ nitrogen ~/Pictures && nitrogen --restore
 
 # Compiling the qtile config
 python -m py_compile ~/.config/qtile/config.py
+
+# Installing software
+pacman -S thunar keepassxc discord steam thunderbird
