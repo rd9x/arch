@@ -4,10 +4,11 @@ Installs the following programs and copies their configuration files:
 
 | Type | Name | Installation |
 |----------|-----------|---------------------|
-| Audio | PulseAudio | pacman -S pulseaudio |
+| Audio | PipewirePulse | pacman -S pipewire-pulse |
 | Compositor | picom | pacman -S picom |
 | FileArchiver | 7zip | pacman -S p7zip |
 | FileManager | Thunar | pacman -S thunar |
+| FileManager(Terminal) | Ranger | pacman -S ranger |
 | Font | Nerd-Fonts | pacman -S nerd-fonts |
 | Image - Background | nitrogen | pacman -S nitrogen |
 | Image - Capture | maim | pacman -S maim |
@@ -19,7 +20,7 @@ Installs the following programs and copies their configuration files:
 | Software - Steam | Steam | pacman -S steam |
 | Software - Teamspeak | Teamspeak 5 | yay -S teamspeak |
 | Terminal | Alacritty | pacman -S alacritty |
-| Theme | Adwaita-dark | pacman -S gnome-themes-extra |
+| Theme | Arc-Dark | pacman -S arc-gtk-theme |
 | Video - Player | ffplay | part of ffmpeg |
 | Video - Recorder | ffmpeg | pacman -S ffmpeg |
 | WindowManager | Qtile | pacman -S qtile |
