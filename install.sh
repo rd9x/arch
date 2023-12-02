@@ -66,7 +66,7 @@ cp ~/Github/arch/.config/picom/picom.conf ~/.config/picom/picom.conf
 cp ~/Github/arch/.config/qtile/config.py ~/.config/qtile/config.py
 cp ~/Github/arch/.config/qtile/autostart.sh ~/.config/qtile/autostart.sh
 chmod +x ~/.config/qtile/autostart.sh
-cp .images/* ~/Images
+cp ~/Github/arch/.images/* ~/Images
 
 # compiling the qtile config
 python -m py_compile ~/.config/qtile/config.py
