@@ -27,7 +27,7 @@ Installs the following programs and copies their configuration files:
 | SW \\\ Discord | Discord | pacman -S discord | - |
 | SW \\\ Image - Capture | maim | pacman -S maim | - |
 | SW \\\ Image - Viewer | feh | pacman -S feh | - |
-| SW \\\ PasswordManager | KeepassXC | pacman -S keepassxc | - |
+| SW \\\ PWManager | KeepassXC | pacman -S keepassxc | - |
 | SW \\\ Steam | Steam | pacman -S steam | - |
 | SW \\\ Teamspeak | Teamspeak 5 | yay -S teamspeak | - |
 | SW \\\ Video - Player | ffplay | pacman -S ffmpeg | - |
