@@ -26,6 +26,7 @@ Installs the following programs and copies their configuration files:
 | SW \\\ FileManager | [pacman] thunar | - |
 | SW \\\ FileManager | [pacman] ranger | - |
 | SW \\\ Discord | [pacman] discord | - |
+| SW \\\ ColorPicker | [pacman] gpick | - |
 | SW \\\ Image - Capture | [pacman] maim | - |
 | SW \\\ Image - Viewer | [pacman] feh | - |
 | SW \\\ PWManager | [pacman] keepassxc | - |
