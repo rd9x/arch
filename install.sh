@@ -41,10 +41,25 @@ sudo pacman -S --noconfirm starship
 sudo pacman -S --noconfirm neofetch
 # editor
 sudo pacman -S --noconfirm nano
+# file archiver
+sudo pacman -S --noconfirm p7zip
 # file manager (terminal)
 sudo pacman -S --noconfirm ranger
 # file manager
 sudo pacman -S --noconfirm thunar
+# Image - Capture
+sudo pacman -S --noconfirm maim
+# Image - Viewer
+sudo pacman -S --noconfirm feh
+# Video - Player/Recorder
+sudo pacman -S --noconfirm ffmpeg
+
+# Software
+sudo pacman -S --noconfirm discord
+sudo pacman -S --noconfirm keepassxc
+sudo pacman -S --noconfirm steam
+yay -S teamspeak
+
 
 # -----  configs and configuration
 
