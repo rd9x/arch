@@ -6,20 +6,22 @@ from libqtile.lazy import lazy
 from libqtile.core.manager import Qtile
 from libqtile.dgroups import simple_key_binder
 
+from qtile_extras import widget
+from qtile_extras.widget.decorations import RectDecoration
+
 # ----------------------------
 # -------- Hotkeys -----------
 # ----------------------------
 
 mod = "mod4"
-terminal = "kitty"
+terminal = "alacritty"
 
 keys = [
 
     # Misc hotkeys
 
-    Key([mod], "a", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
-    Key([mod], "space", lazy.spawn("rofi -show drun"), desc="Launch rofi drun"),
-    Key([mod], "Tab", lazy.spawn("rofi -show window"), desc="Launch rofi window switcher"),
+    # Key([mod], "space", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
+    Key([mod], "space", lazy.spawn("rofi -show drun"), desc="Launch rofi"),
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
@@ -44,7 +46,7 @@ keys = [
     Key([mod], "l", lazy.layout.right(), desc="Move focus to right"),
     Key([mod], "j", lazy.layout.down(), desc="Move focus down"),
     Key([mod], "k", lazy.layout.up(), desc="Move focus up"),
-    # Key([mod], "Tab", lazy.layout.next(), desc="Move window focus to other window"),
+    Key([mod], "Tab", lazy.layout.next(), desc="Move window focus to other window"),
 
     Key([mod, "control"], "h", lazy.layout.shuffle_left(), desc="Move window to the left"),
     Key([mod, "control"], "l", lazy.layout.shuffle_right(), desc="Move window to the right"),
@@ -70,12 +72,18 @@ groups = [
     Group("1"),
     Group("2"),
     Group("3", spawn=["discord", "teamspeak"]),
-    Group("4", spawn=["keepassxc", "thunderbird"]),
+    Group("4", spawn="keepassxc"),
+    Group("5"),
+    Group("6"),
+    Group("7"),
+#    Group("8"),
+#    Group("9"),
+#    Group("0")
 ]
 
 layouts = [
-    layout.Columns(border_normal="#1870df", border_focus="#ffcc44", border_focus_stack=["#008f39", "#7d9e7f"], border_width=2, margin=12),
-    layout.Max(margin=12, border_focus="#ffcc44", border_width=2),
+    layout.Columns(border_normal="#4c505e", border_focus="#b7bdf8", border_focus_stack=["#008f39", "#7d9e7f"], border_width=2, margin=[6, 12, 12, 12]),
+    layout.Max(margin=12, border_focus="#b7bdf8", border_width=2),
 ]
 
 # Drag floating layouts.
@@ -104,37 +112,123 @@ floating_layout = layout.Floating(
 # ---------------------------
 
 widget_defaults = dict(
-    font="sans",
+    font="RobotoMono Nerd Font",
     fontsize=16,
     padding=12,
 )
 extension_defaults = widget_defaults.copy()
 
+decoration_group= {
+    "decorations": [
+        RectDecoration(colour="#181825", radius=0, filled=True, group=True)
+    ],
+    "padding": 8,
+}
+decoration_group2= {
+    "decorations": [
+        RectDecoration(colour="#181825", radius=0, filled=True, group=True, extrawidth=10)
+    ],
+    "padding": 8,
+}
+
 screens = [
     Screen(
         top=bar.Bar(
             [
-                widget.GroupBox(highlight_method='line'),
+                widget.GroupBox(
+			highlight_method='line',
+			**decoration_group
+		),
+		widget.Spacer(
+			length=12
+		),
+                widget.Systray(
+			icon_size=22,
+			**decoration_group2
+		),
+		widget.Spacer(
+			length=12
+		),
                 widget.Prompt(),
-                widget.WindowTabs(),
-	
-		widget.Spacer(length=50),
-		widget.NvidiaSensors(format='GPU | {temp}°C', threshold=75, foreground_alert='ff6000'),
-		widget.Spacer(length=15),
-                widget.ThermalSensor(format='CPU | {temp:.0f}{unit}'),
-		widget.Spacer(length=15),
-                widget.Memory(format='RAM |{MemUsed: .0f}{mm}/{MemTotal: .0f}{mm}', measure_mem='G'),
-		widget.Spacer(length=50),	
-
-                widget.Systray(icon_size=22),
-		widget.Spacer(length=20),
-                widget.Volume(),
-                widget.Clock(format="%A, %m/%d  |  %H:%M:%S"),
+		widget.Spacer(
+			length=100
+		),
+                widget.TaskList(
+			border='#181825',
+			highlight_method='block',
+			title_width_method='uniform',
+			padding=6,
+		),
+		widget.Spacer(
+			length=100
+		),
+                widget.Volume(
+			fmt='󱄠 {}',
+			foreground='#c6a0f6',
+			**decoration_group
+		),
+		widget.Spacer(
+			length=12
+		),
+		widget.NvidiaSensors(
+			format=' {temp}°C', threshold=75, foreground_alert='ff6000',
+			foreground="#8aadf4",
+			**decoration_group
+		),
+		widget.Spacer(
+			length=12
+		),
+                widget.CPU(
+			format=' {load_percent:2.0f}%',
+			foreground="#8aadf4",
+			**decoration_group
+		),
+                widget.ThermalSensor(
+			format='{temp:.0f}{unit}',
+			foreground="#8aadf4",
+			**decoration_group
+		),
+		widget.Spacer(
+			length=12
+		),
+                widget.Memory(
+			format=' {MemUsed:.0f}{mm}/{MemTotal:.0f}{mm}', measure_mem='G',
+			foreground="#a6da95",
+			**decoration_group
+		),
+		widget.Spacer(
+			length=12
+		),
+                widget.Net(
+			format='{down:2.0f}{down_suffix} ↓↑ {up:2.0f}{up_suffix}',
+			foreground='#eed49f',
+			interface='enp12s0',
+			prefix='M',
+			scroll='True',
+			scroll_fixed_width='True',
+			**decoration_group
+		),
+		widget.Spacer(
+			length=12
+		),
+                widget.Clock(
+			format=" %a, %b %d",
+			foreground="#f5a97f",
+			**decoration_group
+		),
+		widget.Spacer(
+			length=12
+		),
+                widget.Clock(
+			format=" %H:%M:%S",
+			foreground="#ed8796",
+			**decoration_group
+		),
             ],
             36,
-	    background="#1E1E2E",
-	    margin=[12, 12, 6, 12],
-	    border_radius=0,
+	   background="#24273a",
+	   margin=[12, 12, 6, 12],
+	   border_radius=0,
         ),
         # You can uncomment this variable if you see that on X11 floating resize/moving is laggy
         # x11_drag_polling_rate = 60,
