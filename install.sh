@@ -8,7 +8,7 @@ sudo pacman -S --noconfirm xorg xorg-xinit xorg-xinput base-devel
 sudo pacman -S --noconfirm nvidia
 # window manager
 sudo pacman -S --noconfirm qtile
-# windo switcher
+# window switcher
 sudo pacman -S --noconfirm rofi
 # X compositor
 sudo pacman -S --noconfirm picom
@@ -72,4 +72,8 @@ cp ~/Github/arch/.images/* ~/Images
 python -m py_compile ~/.config/qtile/config.py
 
 # setting up the wallpaper
-nitrogen ~/Images && nitrogen --restore
+nitrogen ~/Images/ --random --set-scaled --save
+nitrogen --restore
+
+# creating xorg.conf
+sudo nvidia-xconfig
