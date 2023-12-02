@@ -49,7 +49,7 @@ sudo pacman -S --noconfirm thunar
 # -----  configs and configuration
 
 # creating directories
-mkdir -p ~/.config/alacritty
+mkdir -p ~/.config/kitty
 mkdir -p ~/.config/gtk-3.0
 mkdir -p ~/.config/picom
 mkdir -p ~/.config/qtile
@@ -60,7 +60,7 @@ cp ~/Github/arch/.bashrc ~/.bashrc
 cp ~/Github/arch/.bash_profile ~/.bash_profile
 cp ~/Github/arch/.gtkrc-2.0 ~/.gtkrc-2.0
 cp ~/Github/arch/.xinitrc ~/.xinitrc
-cp ~/Github/arch/.config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
+cp ~/Github/arch/.config/kitty/kitty.conf ~/.config/kitty/kitty.conf
 cp ~/Github/arch/.config/gtk-3.0/settings.ini ~/.config/gtk-3.0/settings.ini
 cp ~/Github/arch/.config/picom/picom.conf ~/.config/picom/picom.conf
 cp ~/Github/arch/.config/qtile/config.py ~/.config/qtile/config.py
