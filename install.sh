@@ -14,6 +14,7 @@ sudo pacman -S --noconfirm qtile
 sudo pacman -S --noconfirm rofi
 # audio
 sudo pacman -S --noconfirm pipewire-pulse
+sudo pacman -S --noconfirm alsa-utils
 # wallpaper
 sudo pacman -S --noconfirm nitrogen
 # python
