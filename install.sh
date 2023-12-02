@@ -4,8 +4,6 @@
 
 # display server
 sudo pacman -S --noconfirm xorg xorg-init xorg-input base-devel
-# display manager
-sudo pacman -S --noconfirm lightdm
 # drivers GPU
 sudo pacman -S --noconfirm nvidia
 # window manager
@@ -69,9 +67,6 @@ cp ~/Github/arch/.config/qtile/config.py ~/.config/qtile/config.py
 cp ~/Github/arch/.config/qtile/autostart.sh ~/.config/qtile/autostart.sh
 chmod +x ~/.config/qtile/autostart.sh
 cp .images/* ~/Images
-
-# enable lightdm service
-sudo systemctl enable lightdm.service
 
 # compiling the qtile config
 python -m py_compile ~/.config/qtile/config.py
