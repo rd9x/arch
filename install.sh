@@ -81,6 +81,7 @@ cp ~/Github/arch/.config/gtk-3.0/settings.ini ~/.config/gtk-3.0/settings.ini
 cp ~/Github/arch/.config/kitty/kitty.conf ~/.config/kitty/kitty.conf
 cp ~/Github/arch/.config/neofetch/config.conf ~/.config/neofetch/config.conf
 cp ~/Github/arch/.config/picom/picom.conf ~/.config/picom/picom.conf
+cp ~/Github/arch/.config/starship.toml ~/.config/starship.toml
 cp ~/Github/arch/.config/qtile/config.py ~/.config/qtile/config.py
 cp ~/Github/arch/.config/qtile/autostart.sh ~/.config/qtile/autostart.sh
 chmod +x ~/.config/qtile/autostart.sh
