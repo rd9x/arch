@@ -33,9 +33,6 @@ Installs the following programs and copies their configuration files:
 | SW \\\ Video - Player | [pacman] ffmpeg | - |
 | SW \\\ Video - Recorder | [pacman] ffmpeg | - |
 
-
-
-
 # Disable Mouse Acceleration 
 
 xinput list <br>
@@ -46,7 +43,8 @@ xinput set-prop 'id' 'libinput Accel Profile Enabled' 0, 1, 0
 
 ffrecord (Alias) <br>
  -> ffmpeg -s 3440x1440 -r 60 -f x11grab -i :0.0 ~/Videos/output.mp4 <br><br>
-maim -o -u output.jpeg
+maim (Alias) <br>
+ -> maim -o -u output.jpeg
 
 # NVIDIA
 
