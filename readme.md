@@ -14,7 +14,7 @@ Installs the following programs and copies their configuration files:
 | SYS \\\ Font | [pacman] nerd-fonts | ~/gtkrc-2.0 & ~/.config/gtk-3.0/settings.ini |
 | SYS \\\ Python | [pacman] python | - |
 | SYS \\\ Python | [pacman] python-psutil | - |
-| SYS \\\ Shell | [pacman] starship | - |
+| SYS \\\ Shell | [pacman] starship | ~/.config/starship.toml |
 | SYS \\\ Terminal | [pacman] kitty | ~/.config/kitty/kitty.conf |
 | SYS \\\ Theme | [yay] catppuccin-gtk-theme-macchiato | ~/gtkrc-2.0 & ~/.config/gtk-3.0/settings.ini |
 | SYS \\\ Theme - Cursor | [yay] qogir-cursor-theme-git | ~/gtkrc-2.0 & ~/.config/gtk-3.0/settings.ini |
