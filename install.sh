@@ -6,12 +6,12 @@
 sudo pacman -S --noconfirm xorg xorg-xinit xorg-xinput base-devel
 # drivers GPU
 sudo pacman -S --noconfirm nvidia
+# X compositor
+sudo pacman -S --noconfirm picom
 # window manager
 sudo pacman -S --noconfirm qtile
 # window switcher
 sudo pacman -S --noconfirm rofi
-# X compositor
-sudo pacman -S --noconfirm picom
 # audio
 sudo pacman -S --noconfirm pipewire-pulse
 # wallpaper
