@@ -4,26 +4,26 @@ Installs the following programs and copies their configuration files:
 
 | Type | Installation | Config |
 | --- | --- | --- |
-| SYS \\\ Audio | [pacman] pipewire-pulse | ? |
-| SYS \\\ AUR Helper | https://github.com/Jguer/yay | ? |
+| SYS \\\ Audio | [pacman] pipewire-pulse | - |
+| SYS \\\ AUR Helper | https://github.com/Jguer/yay | - |
 | SYS \\\ Compositor | [pacman] picom | ~/.config/picom/picom.conf |
 | SYS \\\ DisplayServer | [pacman] xorg | /etc/X11/xorg.conf |
-| SYS \\\ Driver | [pacman] nvidia | ? |
-| SYS \\\ Editor  | [pacman] nano | ? |
-| SYS \\\ Font | [pacman] nerd-fonts | ? |
-| SYS \\\ Python | [pacman] python | ? |
-| SYS \\\ Python | [pacman] python-psutil | ? |
-| SYS \\\ Shell | [pacman] starship | ? |
+| SYS \\\ Driver | [pacman] nvidia | /etc/X11/xorg.conf |
+| SYS \\\ Editor  | [pacman] nano | - |
+| SYS \\\ Font | [pacman] nerd-fonts | ~/gtkrc-2.0 & ~/.config/gtk-3.0/settings.ini |
+| SYS \\\ Python | [pacman] python | - |
+| SYS \\\ Python | [pacman] python-psutil | - |
+| SYS \\\ Shell | [pacman] starship | - |
 | SYS \\\ Terminal | [pacman] kitty | ~/.config/kitty/kitty.conf |
 | SYS \\\ Theme | [yay] catppuccin-gtk-theme-macchiato | ~/gtkrc-2.0 & ~/.config/gtk-3.0/settings.ini |
 | SYS \\\ Theme - Cursor | [yay] qogir-cursor-theme-git | ~/gtkrc-2.0 & ~/.config/gtk-3.0/settings.ini |
 | SYS \\\ Theme - Icons | [pacman] papirus-icon-theme| ~/gtkrc-2.0 & ~/.config/gtk-3.0/settings.ini |
 | SYS \\\ Wallpaper | [pacman] nitrogen | ~/.config/nitrogen/config.conf |
-| SYS \\\ WindowManager | [pacman] pacman | ~/.config/qtile/config.py |
-| SYS \\\ WindowSwitcher | [pacman] rofi | ? |
+| SYS \\\ WindowManager | [pacman] qtile | ~/.config/qtile/config.py |
+| SYS \\\ WindowSwitcher | [pacman] rofi | - |
 | SW \\\ FileArchiver | [pacman] p7zip | - |
-| SW \\\ FileManager | [pacman] thunar | ? |
-| SW \\\ FileManager | [pacman] ranger | ? |
+| SW \\\ FileManager | [pacman] thunar | - |
+| SW \\\ FileManager | [pacman] ranger | - |
 | SW \\\ Discord | [pacman] discord | - |
 | SW \\\ Image - Capture | [pacman] maim | - |
 | SW \\\ Image - Viewer | [pacman] feh | - |
