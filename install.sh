@@ -77,6 +77,7 @@ mkdir -p ~/Images
 cp ~/Github/arch/.bashrc ~/.bashrc 
 cp ~/Github/arch/.bash_profile ~/.bash_profile
 cp ~/Github/arch/.gtkrc-2.0 ~/.gtkrc-2.0
+cp ~/Github/arch/.nanorc ~/.nanorc
 cp ~/Github/arch/.xinitrc ~/.xinitrc
 cp ~/Github/arch/.config/gtk-3.0/settings.ini ~/.config/gtk-3.0/settings.ini
 cp ~/Github/arch/.config/kitty/kitty.conf ~/.config/kitty/kitty.conf
