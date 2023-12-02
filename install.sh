@@ -3,7 +3,7 @@
 # ----- installing the base system
 
 # display server
-sudo pacman -S --noconfirm xorg xorg-init xorg-input base-devel
+sudo pacman -S --noconfirm xorg xorg-xinit xorg-xinput base-devel
 # drivers GPU
 sudo pacman -S --noconfirm nvidia
 # window manager
