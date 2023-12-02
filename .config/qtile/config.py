@@ -132,7 +132,7 @@ screens = [
                 widget.Clock(format="%A, %m/%d  |  %H:%M:%S"),
             ],
             36,
-	    background="#2e3440",
+	    background="#1E1E2E",
 	    margin=[12, 12, 6, 12],
 	    border_radius=0,
         ),
