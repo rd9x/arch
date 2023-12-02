@@ -11,7 +11,7 @@ Installs the following programs and copies their configuration files:
 | SYS \\\ Driver | NVIDIA | pacman -S nvidia | ? |
 | SYS \\\ Editor  | Nano | pacman -S nano | ? |
 | SYS \\\ FileManager(Shell) | Ranger | pacman -S ranger | ? |
-| SYS \\\ Font | Nerd Font Roboto Mono | pacman -S nerd-fonts | ? |
+| SYS \\\ Font | NF Roboto Mono | pacman -S nerd-fonts | ? |
 | SYS \\\ Python | Python3 | pacman -S python | ? |
 | SYS \\\ Python | psutil | pacman -S python-psutil | ? |
 | SYS \\\ Shell | Starship | pacman -S starship | ? |
