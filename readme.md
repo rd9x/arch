@@ -4,34 +4,34 @@ Installs the following programs and copies their configuration files:
 
 | Type | Name | Installation | Config |
 | --- | --- | --- | --- |
-| SYS \\\ Audio | PipeWire Pulse | pacman -S pipewire-pulse | ? |
+| SYS \\\ Audio | PipeWire Pulse | [pacman] pipewire-pulse | ? |
 | SYS \\\ AUR Helper | yay | https://github.com/Jguer/yay | ? |
-| SYS \\\ Compositor | Picom | pacman -S picom | ~/.config/picom/picom.conf |
-| SYS \\\ DisplayServer | X11 | pacman -S xorg | /etc/X11/xorg.conf |
-| SYS \\\ Driver | NVIDIA | pacman -S nvidia | ? |
-| SYS \\\ Editor  | Nano | pacman -S nano | ? |
-| SYS \\\ FileManager(Shell) | Ranger | pacman -S ranger | ? |
-| SYS \\\ Font | NF Roboto Mono | pacman -S nerd-fonts | ? |
-| SYS \\\ Python | Python3 | pacman -S python | ? |
-| SYS \\\ Python | psutil | pacman -S python-psutil | ? |
-| SYS \\\ Shell | Starship | pacman -S starship | ? |
-| SYS \\\ Terminal | Kitty | pacman -S kitty | ~/.config/kitty/kitty.conf |
-| SYS \\\ Theme | Catppuccin Macchiato | yay -S catppuccin-gtk-theme-macchiato | ~/gtkrc-2.0 & ~/.config/gtk-3.0/settings.ini |
-| SYS \\\ Theme - Cursor | Qogir | yay -S qogir-cursor-theme-git | ~/gtkrc-2.0 & ~/.config/gtk-3.0/settings.ini |
-| SYS \\\ Theme - Icons | Rofi | pacman -S papirus-icon-theme| ~/gtkrc-2.0 & ~/.config/gtk-3.0/settings.ini |
-| SYS \\\ Wallpaper | Nitrogen | pacman -S nitrogen | ~/.config/nitrogen/config.conf |
-| SYS \\\ WindowManager | Qtile | pacman -S pacman | ~/.config/qtile/config.py |
-| SYS \\\ WindowSwitcher | Rofi | pacman -S rofi | ? |
-| SW \\\ FileArchiver | 7zip | pacman -S p7zip | - |
-| SW \\\ FileManager  | Thunar | pacman -S thunar | ? |
-| SW \\\ Discord | Discord | pacman -S discord | - |
-| SW \\\ Image - Capture | maim | pacman -S maim | - |
-| SW \\\ Image - Viewer | feh | pacman -S feh | - |
-| SW \\\ PWManager | KeepassXC | pacman -S keepassxc | - |
-| SW \\\ Steam | Steam | pacman -S steam | - |
-| SW \\\ Teamspeak | Teamspeak 5 | yay -S teamspeak | - |
-| SW \\\ Video - Player | ffplay | pacman -S ffmpeg | - |
-| SW \\\ Video - Recorder | ffmpeg | pacman -S ffmpeg | - |
+| SYS \\\ Compositor | Picom | [pacman] picom | ~/.config/picom/picom.conf |
+| SYS \\\ DisplayServer | X11 | [pacman] xorg | /etc/X11/xorg.conf |
+| SYS \\\ Driver | NVIDIA | [pacman] nvidia | ? |
+| SYS \\\ Editor  | Nano | [pacman] nano | ? |
+| SYS \\\ FileManager(Shell) | Ranger | [pacman] ranger | ? |
+| SYS \\\ Font | NF Roboto Mono | [pacman] nerd-fonts | ? |
+| SYS \\\ Python | Python3 | [pacman] python | ? |
+| SYS \\\ Python | psutil | [pacman] python-psutil | ? |
+| SYS \\\ Shell | Starship | [pacman] starship | ? |
+| SYS \\\ Terminal | Kitty | [pacman] kitty | ~/.config/kitty/kitty.conf |
+| SYS \\\ Theme | Catppuccin Macchiato | [yay] catppuccin-gtk-theme-macchiato | ~/gtkrc-2.0 & ~/.config/gtk-3.0/settings.ini |
+| SYS \\\ Theme - Cursor | Qogir | [yay] qogir-cursor-theme-git | ~/gtkrc-2.0 & ~/.config/gtk-3.0/settings.ini |
+| SYS \\\ Theme - Icons | Rofi | [pacman] papirus-icon-theme| ~/gtkrc-2.0 & ~/.config/gtk-3.0/settings.ini |
+| SYS \\\ Wallpaper | Nitrogen | [pacman] nitrogen | ~/.config/nitrogen/config.conf |
+| SYS \\\ WindowManager | Qtile | [pacman] pacman | ~/.config/qtile/config.py |
+| SYS \\\ WindowSwitcher | Rofi | [pacman] rofi | ? |
+| SW \\\ FileArchiver | 7zip | [pacman] p7zip | - |
+| SW \\\ FileManager  | Thunar | [pacman] thunar | ? |
+| SW \\\ Discord | Discord | [pacman] discord | - |
+| SW \\\ Image - Capture | maim | [pacman] maim | - |
+| SW \\\ Image - Viewer | feh | [pacman] feh | - |
+| SW \\\ PWManager | KeepassXC | [pacman] keepassxc | - |
+| SW \\\ Steam | Steam | [pacman] steam | - |
+| SW \\\ Teamspeak | Teamspeak 5 | [yay] teamspeak | - |
+| SW \\\ Video - Player | ffplay | [pacman] ffmpeg | - |
+| SW \\\ Video - Recorder | ffmpeg | [pacman] ffmpeg | - |
 
 
 
