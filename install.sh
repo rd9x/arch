@@ -28,7 +28,7 @@ yay -Y --gendb
 # font
 sudo pacman -S nerd-fonts
 # theme
-sudo pacman -S --noconfirm arc-gtk-theme
+yay -S catppuccin-gtk-theme-macchiato
 # theme - icons
 sudo pacman -S --noconfirm papirus-icon-theme
 # theme - cursor
