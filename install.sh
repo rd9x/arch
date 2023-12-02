@@ -60,6 +60,7 @@ sudo pacman -S --noconfirm discord
 sudo pacman -S --noconfirm keepassxc
 sudo pacman -S --noconfirm steam
 yay -S teamspeak
+sudo pacman -S --noconfirm gpick
 
 
 # -----  configs and configuration
