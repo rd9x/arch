@@ -10,7 +10,6 @@ Installs the following programs and copies their configuration files:
 | SYS \\\ DisplayServer | X11 | [pacman] xorg | /etc/X11/xorg.conf |
 | SYS \\\ Driver | NVIDIA | [pacman] nvidia | ? |
 | SYS \\\ Editor  | Nano | [pacman] nano | ? |
-| SYS \\\ FileManager(Shell) | Ranger | [pacman] ranger | ? |
 | SYS \\\ Font | NF Roboto Mono | [pacman] nerd-fonts | ? |
 | SYS \\\ Python | Python3 | [pacman] python | ? |
 | SYS \\\ Python | psutil | [pacman] python-psutil | ? |
@@ -24,6 +23,7 @@ Installs the following programs and copies their configuration files:
 | SYS \\\ WindowSwitcher | Rofi | [pacman] rofi | ? |
 | SW \\\ FileArchiver | 7zip | [pacman] p7zip | - |
 | SW \\\ FileManager  | Thunar | [pacman] thunar | ? |
+| SW \\\ FileManager | Ranger | [pacman] ranger | ? |
 | SW \\\ Discord | Discord | [pacman] discord | - |
 | SW \\\ Image - Capture | maim | [pacman] maim | - |
 | SW \\\ Image - Viewer | feh | [pacman] feh | - |
