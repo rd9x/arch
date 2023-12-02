@@ -3,7 +3,7 @@
 Installs the following programs and copies their configuration files:
 
 | Type | Name | Installation | Config |
-|----------|-----------|---------------------|
+| --- | --- | --- | --- |
 | System \\ Audio | PipeWire Pulse | pacman -S pipewire-pulse | ? |
 | System \\ AUR Helper | yay | https://github.com/Jguer/yay | ? |
 | System \\ Compositor | Picom | pacman -S picom | ~/.config/picom/picom.conf |
