@@ -11,7 +11,7 @@ from libqtile.dgroups import simple_key_binder
 # ----------------------------
 
 mod = "mod4"
-terminal = "alacritty"
+terminal = "kitty"
 
 keys = [
 
