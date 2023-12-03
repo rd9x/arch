@@ -2,6 +2,11 @@
 
 # ----- installing the base system
 
+# yay
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+yay -Y --gendb
 # display server
 sudo pacman -S --noconfirm xorg xorg-xinit xorg-xinput base-devel
 # drivers GPU
@@ -10,6 +15,7 @@ sudo pacman -S --noconfirm nvidia
 sudo pacman -S --noconfirm picom
 # window manager
 sudo pacman -S --noconfirm qtile
+yay -S qtile-extras
 # window switcher
 sudo pacman -S --noconfirm rofi
 # audio
@@ -21,11 +27,6 @@ sudo pacman -S --noconfirm nitrogen
 sudo pacman -S --noconfirm python
 # python - psutil
 sudo pacman -S --noconfirm python-psutil
-# yay
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
-yay -Y --gendb
 # font
 sudo pacman -S nerd-fonts
 # theme
