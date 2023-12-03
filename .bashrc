@@ -8,7 +8,6 @@ alias lsa='ls -A'                # show hidden dotfiles
 alias ll='ls -lav --ignore=..'   # show long listing of all except ".."
 alias l='ls -lav --ignore=.?*'   # show long listing but no hidden dotfiles except "."
 alias pac='sudo pacman'
-alias yay='sudo yay'
 alias ffrecord='ffmpeg -s 3440x1440 -r 60 -f x11grab -i :0.0 ~/Videos/output.mp4'
 alias maim='maim -o -u output.jpeg'
 alias lxinput='xinput list'
