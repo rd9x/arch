@@ -37,6 +37,8 @@ sudo pacman -S --noconfirm python
 sudo pacman -S --noconfirm python-psutil
 # font
 sudo pacman -S nerd-fonts
+# task manager
+sudo pacman -S --noconfirm htop
 # theme
 yay -S --noconfirm catppuccin-gtk-theme-macchiato
 # theme - icons
