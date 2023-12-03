@@ -7,6 +7,9 @@ sudo pacman -S --noconfirm pacman-contrib
 sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
 sudo chmod a+w /etc/pacman.d/mirrorlist
 sudo rankmirrors -n 6 /etc/pacman.d/mirrorlist.backup > /etc/pacman.d/mirrorlist
+# pacman config
+sudo cp ~/Github/arch/etc/pacman.conf /etc/pacman.conf
+sudo pacman -Sy
 # yay
 git clone https://aur.archlinux.org/yay.git
 cd yay
