@@ -35,7 +35,7 @@ sudo pacman -S --noconfirm papirus-icon-theme
 # theme - cursor
 yay -S qogir-cursor-theme-git
 # terminal
-sudo pacman -S --noconfirm alacritty
+sudo pacman -S --noconfirm kitty
 # shell
 sudo pacman -S --noconfirm starship
 # neofetch
