@@ -59,6 +59,7 @@ sudo pacman -S --noconfirm p7zip
 sudo pacman -S --noconfirm ranger
 # file manager
 sudo pacman -S --noconfirm thunar
+sudo pacman -S --noconfirm gvfs
 # Image - Capture
 sudo pacman -S --noconfirm maim
 # Image - Viewer
@@ -67,6 +68,7 @@ sudo pacman -S --noconfirm feh
 sudo pacman -S --noconfirm ffmpeg
 
 # Software
+sudo pacman -S --noconfirm firefox
 sudo pacman -S --noconfirm discord
 sudo pacman -S --noconfirm keepassxc
 sudo pacman -S steam
