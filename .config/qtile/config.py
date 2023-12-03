@@ -21,6 +21,7 @@ keys = [
     # Misc hotkeys
 
     Key([mod], "a", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
+    Key([mod], "p", lazy.spawn("maim -o -u output.jpeg"), desc="Take Screenshot"),
     Key([mod], "space", lazy.spawn("rofi -show drun"), desc="Launch rofi"),
     Key([mod], "Tab", lazy.spawn("rofi -show window"), desc="Launch rofi window switcher"),
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
