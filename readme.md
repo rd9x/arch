@@ -35,6 +35,7 @@ Installs the following programs and copies their configuration files:
 | SW \\\ Teamspeak | [yay] teamspeak | - |
 | SW \\\ Video - Player | [pacman] ffmpeg | - |
 | SW \\\ Video - Recorder | [pacman] ffmpeg | - |
+| SW \\\ Webbrowser | [pacman] firefox | - |
 
 # Disable Mouse Acceleration 
 
