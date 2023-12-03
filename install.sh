@@ -15,7 +15,7 @@ sudo pacman -S --noconfirm nvidia
 sudo pacman -S --noconfirm picom
 # window manager
 sudo pacman -S --noconfirm qtile
-yay -S qtile-extras
+yay -S --noconfirm qtile-extras
 # window switcher
 sudo pacman -S --noconfirm rofi
 # audio
@@ -30,11 +30,11 @@ sudo pacman -S --noconfirm python-psutil
 # font
 sudo pacman -S nerd-fonts
 # theme
-yay -S catppuccin-gtk-theme-macchiato
+yay -S --noconfirm catppuccin-gtk-theme-macchiato
 # theme - icons
 sudo pacman -S --noconfirm papirus-icon-theme
 # theme - cursor
-yay -S qogir-cursor-theme-git
+yay -S --noconfirm qogir-cursor-theme-git
 # terminal
 sudo pacman -S --noconfirm kitty
 # shell
@@ -60,7 +60,7 @@ sudo pacman -S --noconfirm ffmpeg
 sudo pacman -S --noconfirm discord
 sudo pacman -S --noconfirm keepassxc
 sudo pacman -S --noconfirm steam
-yay -S teamspeak
+yay -S --noconfirm teamspeak
 sudo pacman -S --noconfirm gpick
 
 
