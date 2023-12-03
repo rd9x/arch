@@ -14,7 +14,7 @@ from qtile_extras.widget.decorations import RectDecoration
 # ----------------------------
 
 mod = "mod4"
-terminal = "alacritty"
+terminal = "kitty"
 
 keys = [
 
@@ -69,11 +69,11 @@ keys = [
 # ----------------------------
 
 groups = [
-    Group("1"),
-    Group("2"),
-    Group("3", spawn=["discord", "teamspeak"]),
-    Group("4", spawn="keepassxc"),
-    Group("5"),
+    Group("WWW"),
+    Group("GMS"),
+    Group("CHT", spawn=["discord", "teamspeak"]),
+    Group("PWD", spawn="keepassxc"),
+    Group("SYS"),
     Group("6"),
     Group("7"),
 #    Group("8"),
@@ -112,21 +112,21 @@ floating_layout = layout.Floating(
 # ---------------------------
 
 widget_defaults = dict(
-    font="RobotoMono Nerd Font",
-    fontsize=16,
+    font="SauceCodePro Nerd Font",
+    fontsize=14,
     padding=12,
 )
 extension_defaults = widget_defaults.copy()
 
 decoration_group= {
     "decorations": [
-        RectDecoration(colour="#181825", radius=0, filled=True, group=True)
+        RectDecoration(colour="#181825", radius=2, filled=True, group=True)
     ],
     "padding": 8,
 }
 decoration_group2= {
     "decorations": [
-        RectDecoration(colour="#181825", radius=0, filled=True, group=True, extrawidth=10)
+        RectDecoration(colour="#181825", radius=2, filled=True, group=True, extrawidth=10)
     ],
     "padding": 8,
 }
@@ -137,6 +137,8 @@ screens = [
             [
                 widget.GroupBox(
 			highlight_method='line',
+			highlight_color='#181825',
+			this_current_screen_border='#b7bdf8',
 			**decoration_group
 		),
 		widget.Spacer(
