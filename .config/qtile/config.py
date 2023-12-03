@@ -48,7 +48,7 @@ keys = [
     Key([mod], "l", lazy.layout.right(), desc="Move focus to right"),
     Key([mod], "j", lazy.layout.down(), desc="Move focus down"),
     Key([mod], "k", lazy.layout.up(), desc="Move focus up"),
-    # Key([mod], "Tab", lazy.layout.next(), desc="Move window focus to other window"),
+    # Key([mod], "Tab", lazy.layout.next(), desc="Move window focus to other windw"),
 
     Key([mod, "control"], "h", lazy.layout.shuffle_left(), desc="Move window to the left"),
     Key([mod, "control"], "l", lazy.layout.shuffle_right(), desc="Move window to the right"),
@@ -96,6 +96,9 @@ mouse = [
 ]
 
 floating_layout = layout.Floating(
+	border_normal="#4c505e",
+	border_focus="#b7bdf8",
+	border_width=2,
     float_rules=[
         # Run the utility of `xprop` to see the wm class and name of an X client.
         *layout.Floating.default_float_rules,
@@ -230,9 +233,9 @@ screens = [
 		),
             ],
             36,
-	   background="#24273a",
-	   margin=[12, 12, 6, 12],
-	   border_radius=0,
+	  background="#24273a",
+	  margin=[12, 12, 6, 12],
+	  border_radius=0,
         ),
         # You can uncomment this variable if you see that on X11 floating resize/moving is laggy
         # x11_drag_polling_rate = 60,
