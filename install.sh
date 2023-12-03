@@ -14,20 +14,14 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 yay -Y --gendb
-# display server
-sudo pacman -S --noconfirm xorg xorg-xinit xorg-xinput base-devel
-# drivers GPU
-sudo pacman -S --noconfirm nvidia
-# X compositor
-sudo pacman -S --noconfirm picom
-# window manager
-sudo pacman -S --noconfirm qtile
-yay -S --noconfirm qtile-extras
-# window switcher
-sudo pacman -S --noconfirm rofi
 # audio
 sudo pacman -S --noconfirm pipewire-pulse
 sudo pacman -S --noconfirm alsa-utils
+# display server, compositor, GPU driver
+sudo pacman -S --noconfirm base-devel xorg xorg-xinit xorg-xinput picom nvidia
+# window manager, switcher
+sudo pacman -S --noconfirm qtile rofi
+yay -S --noconfirm qtile-extras
 # wallpaper
 sudo pacman -S --noconfirm nitrogen
 # python, psutil
@@ -39,22 +33,17 @@ yay -S --noconfirm catppuccin-gtk-theme-macchiato
 yay -S --noconfirm qogir-cursor-theme-git
 sudo pacman -S --noconfirm papirus-icon-theme
 sudo pacman -S nerd-fonts
-# terminal, shell, neofetch
-sudo pacman -S --noconfirm kitty starship neofetch
-# editor
-sudo pacman -S --noconfirm nano
+# terminal, shell, editor, neofetch
+sudo pacman -S --noconfirm kitty starship neofetch nano
 # file archiver, file manager
 sudo pacman -S --noconfirm p7zip ranger thunar gvfs
 # Image and Video Player, Screenshot
 sudo pacman -S --noconfirm maim feh ffmpeg
 
 # Software
-sudo pacman -S --noconfirm firefox
-sudo pacman -S --noconfirm discord
-sudo pacman -S --noconfirm keepassxc
+sudo pacman -S --noconfirm firefox discord keepassxc gpick gamemode
 sudo pacman -S steam
 yay -S --noconfirm teamspeak
-sudo pacman -S --noconfirm gpick
 
 
 # -----  configs
