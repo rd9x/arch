@@ -5,7 +5,7 @@ Installs the following programs and copies their configuration files:
 | Type | Installation | Config |
 | --- | --- | --- |
 | SYS \\\ Audio | [pacman] pipewire-pulse | - |
-| SYS \\\ AudioUtilities | [pacman] alsa-utils | - |
+| SYS \\\ AudioUtilities | [pacman] alsa-utils | ~/.asoundrc |
 | SYS \\\ AUR Helper | https://github.com/Jguer/yay | - |
 | SYS \\\ Compositor | [pacman] picom | ~/.config/picom/picom.conf |
 | SYS \\\ DisplayServer | [pacman] xorg | /etc/X11/xorg.conf |
