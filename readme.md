@@ -12,6 +12,7 @@ Installs the following programs and copies their configuration files:
 | SYS \\\ Driver | [pacman] nvidia | /etc/X11/xorg.conf |
 | SYS \\\ Editor  | [pacman] nano | ~/.nanorc |
 | SYS \\\ Font | [pacman] nerd-fonts | ~/gtkrc-2.0 & ~/.config/gtk-3.0/settings.ini |
+| SYS \\\ Neofetch | [pacman] neofetch | ~/.config/neofetch/config.conf |
 | SYS \\\ Python | [pacman] python | - |
 | SYS \\\ Python | [pacman] python-psutil | - |
 | SYS \\\ Shell | [pacman] starship | ~/.config/starship.toml |
