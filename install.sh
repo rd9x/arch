@@ -67,7 +67,7 @@ sudo pacman -S --noconfirm ffmpeg
 # Software
 sudo pacman -S --noconfirm discord
 sudo pacman -S --noconfirm keepassxc
-sudo pacman -S --noconfirm steam
+sudo pacman -S steam
 yay -S --noconfirm teamspeak
 sudo pacman -S --noconfirm gpick
 
