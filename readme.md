@@ -10,7 +10,7 @@ Installs the following programs and copies their configuration files:
 | SYS \\\ Compositor | [pacman] picom | ~/.config/picom/picom.conf |
 | SYS \\\ DisplayServer | [pacman] xorg | /etc/X11/xorg.conf |
 | SYS \\\ Driver | [pacman] nvidia | /etc/X11/xorg.conf |
-| SYS \\\ Editor  | [pacman] nano | - |
+| SYS \\\ Editor  | [pacman] nano | ~/.nanorc |
 | SYS \\\ Font | [pacman] nerd-fonts | ~/gtkrc-2.0 & ~/.config/gtk-3.0/settings.ini |
 | SYS \\\ Python | [pacman] python | - |
 | SYS \\\ Python | [pacman] python-psutil | - |
