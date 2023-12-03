@@ -18,7 +18,7 @@ yay -Y --gendb
 sudo pacman -S --noconfirm pipewire-pulse
 sudo pacman -S --noconfirm alsa-utils
 # display server, compositor, GPU driver
-sudo pacman -S --noconfirm base-devel xorg xorg-xinit xorg-xinput picom nvidia
+sudo pacman -S --noconfirm base-devel xorg xorg-xinit xorg-xinput picom nvidia nvidia-settings
 # window manager, switcher
 sudo pacman -S --noconfirm qtile rofi
 yay -S --noconfirm qtile-extras
