@@ -59,4 +59,9 @@ GUI: nvidia-settings
 
 ![arch](https://github.com/Rudi9x/arch/assets/134175623/e223b10c-861b-4245-92be-5a7c79144aa2) <br>
 
-![arch2](https://github.com/Rudi9x/arch/assets/134175623/451bf575-6315-4758-b919-bb2effd1a3a9)
+![arch2](https://github.com/Rudi9x/arch/assets/134175623/451bf575-6315-4758-b919-bb2effd1a3a9) <br>
+
+![arch3](https://github.com/Rudi9x/arch/assets/134175623/dae72c80-eabd-4725-a81e-92e0ae8b2928)
+
+
+
