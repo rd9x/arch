@@ -1,1 +1,0 @@
-ATTRS{idVendor}=="046d", ATTRS{idProduct}=="c53f", RUN+="~/mouse.sh"
