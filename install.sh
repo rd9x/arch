@@ -53,6 +53,9 @@ cp -r ~/Github/arch/.config/* ~/.config/
 cp -r ~/Github/arch/.home/* ~/
 chmod +x ~/.config/qtile/autostart.sh
 cp ~/Github/arch/.images/* ~/Pictures
+cp ~/Github/arch/mouse.sh ~/mouse.sh
+chmod +x ~/mouse.sh
+cp -r ~/Github/arch/.etc/* /etc/
 
 # compiling the qtile config
 python -m py_compile ~/.config/qtile/config.py
