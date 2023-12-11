@@ -34,7 +34,7 @@ sudo pacman -S --noconfirm kitty starship neofetch nano
 sudo pacman -S --noconfirm p7zip ranger thunar gvfs maim feh ffmpeg
 
 # Software
-sudo pacman -S --noconfirm firefox discord keepassxc gpick gamemode thunderbird
+sudo pacman -S --noconfirm firefox discord qtpass gpick gamemode thunderbird
 sudo pacman -S steam
 yay -S --noconfirm teamspeak
 
