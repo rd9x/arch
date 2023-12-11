@@ -30,7 +30,7 @@ Installs the following programs and copies their configuration files:
 | SW \\\ ColorPicker | [pacman] gpick | - |
 | SW \\\ Image - Capture | [pacman] maim | - |
 | SW \\\ Image - Viewer | [pacman] feh | - |
-| SW \\\ PWManager | [pacman] keepassxc | - |
+| SW \\\ PWManager | [pacman] qtpass | - |
 | SW \\\ Steam | [pacman] steam | - |
 | SW \\\ Teamspeak | [yay] teamspeak | - |
 | SW \\\ Video - Player | [pacman] ffmpeg | - |
