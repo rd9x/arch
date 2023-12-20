@@ -233,7 +233,7 @@ screens = [
 		),
             ],
             36,
-	  background="#24273a",
+	  background="#00000000",
 	  margin=[12, 12, 6, 12],
 	  border_radius=0,
         ),
