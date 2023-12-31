@@ -37,7 +37,9 @@ sudo pacman -S --noconfirm p7zip ranger thunar gvfs maim feh ffmpeg
 sudo pacman -S --noconfirm firefox discord qtpass gpick gamemode thunderbird
 sudo pacman -S steam
 yay -S --noconfirm teamspeak
-
+sudo pacman -S openvpn openresolv wget
+sudo wget "https://raw.githubusercontent.com/ProtonVPN/scripts/master/update-resolv-conf.sh" -O "/etc/openvpn/update-resolv-conf"
+sudo chmod +x "/etc/openvpn/update-resolv-conf"
 
 # -----  configs
 
