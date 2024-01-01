@@ -74,12 +74,12 @@ groups = [
     Group("WWW"),
     Group("GMS"),
     Group("CHT", spawn=["discord", "teamspeak"]),
-    Group("PWD", spawn="keepassxc"),
+    Group("PWD", spawn="qtpass"),
     Group("SYS"),
     Group("6"),
     Group("7"),
-#    Group("8"),
-#    Group("9"),
+    Group("8"),
+    Group("9"),
 #    Group("0")
 ]
 
