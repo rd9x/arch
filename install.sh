@@ -4,11 +4,6 @@
 
 # update
 sudo pacman -Syu
-# mirror ranking
-sudo pacman -S --noconfirm pacman-contrib
-sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
-sudo chmod a+w /etc/pacman.d/mirrorlist
-sudo rankmirrors -n 6 /etc/pacman.d/mirrorlist.backup > /etc/pacman.d/mirrorlist
 # yay
 git clone https://aur.archlinux.org/yay.git
 cd yay
@@ -34,10 +29,9 @@ sudo pacman -S --noconfirm kitty starship neofetch nano
 sudo pacman -S --noconfirm p7zip ranger thunar gvfs maim feh ffmpeg
 
 # Software
-sudo pacman -S --noconfirm firefox discord qtpass gpick gamemode thunderbird
+sudo pacman -S --noconfirm firefox discord qtpass gpick gamemode thunderbird openvpn openresolv wget
 sudo pacman -S steam
 yay -S --noconfirm teamspeak
-sudo pacman -S openvpn openresolv wget
 sudo wget "https://raw.githubusercontent.com/ProtonVPN/scripts/master/update-resolv-conf.sh" -O "/etc/openvpn/update-resolv-conf"
 sudo chmod +x "/etc/openvpn/update-resolv-conf"
 
