@@ -38,10 +38,10 @@ sudo chmod +x "/etc/openvpn/update-resolv-conf"
 # -----  configs
 
 # copying the configs
-cp -r ~/Github/arch/.config/* ~/.config/
-cp -r ~/Github/arch/.home/* ~/
+cp -r ~/Github/arch/.config/. ~/.config/
+cp -r ~/Github/arch/.home/. ~/
 chmod +x ~/.config/qtile/autostart.sh
-cp ~/Github/arch/.images/* ~/Pictures
+cp ~/Github/arch/.images/. ~/Pictures
 cp ~/Github/arch/.etc/environment /etc/environment
 
 # compiling the qtile config
