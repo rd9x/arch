@@ -10,7 +10,7 @@ cd yay
 makepkg -si
 yay -Y --gendb
 # audio, display server, compositor, GPU driver
-sudo pacman -S --noconfirm pipewire-pulse alsa-utils base-devel xorg xorg-xinit xorg-xinput picom nvidia nvidia-settings
+sudo pacman -S --noconfirm pipewire-pulse alsa-utils pavucontrol base-devel xorg xorg-xinit xorg-xinput picom nvidia nvidia-settings
 # window manager, switcher
 sudo pacman -S --noconfirm qtile rofi
 yay -S --noconfirm qtile-extras
@@ -38,8 +38,8 @@ sudo chmod +x "/etc/openvpn/update-resolv-conf"
 # -----  configs
 
 # copying the configs
-cp -r ~/Github/arch/.config/. ~/.config/
-cp -r ~/Github/arch/.home/. ~/
+cp -r ~/Github/arch/.config/. ~/.config
+cp -r ~/Github/arch/.home/. ~
 chmod +x ~/.config/qtile/autostart.sh
 cp ~/Github/arch/.images/* ~/Pictures
 cp ~/Github/arch/.etc/environment /etc/environment
