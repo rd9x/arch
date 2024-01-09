@@ -19,7 +19,7 @@ sudo pacman -S --noconfirm python python-psutil
 # wallpaper, theme, icons, cursor, font
 yay -S --noconfirm catppuccin-gtk-theme-macchiato
 yay -S --noconfirm qogir-cursor-theme-git
-sudo pacman -S --noconfirm nitrogen papirus-icon-theme breeze breeze-gtk
+sudo pacman -S --noconfirm nitrogen papirus-icon-theme breeze breeze-gtk noto-fonts-emoji
 sudo pacman -S nerd-fonts
 # task manager
 sudo pacman -S --noconfirm htop
