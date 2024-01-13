@@ -26,7 +26,7 @@ sudo pacman -S --noconfirm htop
 # terminal, shell, editor, neofetch
 sudo pacman -S --noconfirm kitty starship neofetch nano
 # file archiver, file manager, image and video player, screenshot
-sudo pacman -S --noconfirm p7zip ranger thunar xfce4-settings gvfs maim feh ffmpeg
+sudo pacman -S --noconfirm p7zip ranger thunar xfce4-settings gvfs ncdu maim feh ffmpeg
 
 # Software
 sudo pacman -S --noconfirm firefox discord qtpass gpick gamemode thunderbird openvpn openresolv wget
