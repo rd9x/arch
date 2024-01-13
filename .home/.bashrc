@@ -5,8 +5,8 @@ eval "$(starship init bash)"
 # Aliases
 alias ls='ls --color=auto'       # default autocoloring
 alias lsa='ls -A'                # show hidden dotfiles
-alias ll='ls -lavh --ignore=..'   # show long listing of all except ".."
-alias l='ls -lavh --ignore=.?*'   # show long listing but no hidden dotfiles except "."
+alias ll='ls -lav --ignore=..'   # show long listing of all except ".."
+alias l='ls -lav --ignore=.?*'   # show long listing but no hidden dotfiles except "."
 alias pac='sudo pacman'
 alias ffrecord='ffmpeg -s 3440x1440 -r 60 -f x11grab -i :0.0 ~/Videos/output.mp4'
 alias maim='maim -s -o'
