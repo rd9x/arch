@@ -100,10 +100,14 @@ sudo nvidia-xconfig
 # Discord
 # sudo pacman -S --noconfirm discord
 
-# QTPass + Kleopatra
-sudo pacman -S --noconfirm qtpass kleopatra
+# Gimp
+sudo pacman -S --noconfirm gimp
 
-# Steam, gamemode, Mangohud
+# QTPass/KeepassXC + Kleopatra
+sudo pacman -S --noconfirm qtpass keepassxc
+sudo pacman -S --noconfirm kleopatra
+
+# Steam, Gamemode, Mangohud
 sudo pacman -S steam
 sudo pacman -S --noconfirm gamemode mangohud
 
@@ -115,6 +119,7 @@ sudo pacman -S --noconfirm thunderbird
 
 # MullvadVPN
 yay -S mullvad-vpn
+
 
 # ---------- Archiv ----------
 
