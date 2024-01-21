@@ -1,35 +1,83 @@
 #!/bin/sh
 
-# ----- installing the base system
+# ---------- System Installation ----------
 
-# update
+
+# update system
 sudo pacman -Syu
-# yay
+
+# install yay
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 yay -Y --gendb
-# audio, display server, compositor, GPU driver
-sudo pacman -S --noconfirm pipewire-pulse alsa-utils pavucontrol base-devel xorg xorg-xinit xorg-xinput picom nvidia nvidia-settings
-# window manager, switcher
+
+
+# ----- Audio and Display
+
+# audio
+sudo pacman -S --noconfirm pipewire-pulse alsa-utils pavucontrol
+
+# compositor
+sudo pacman -S --noconfirm picom 
+
+# display server 
+sudo pacman -S --noconfirm base-devel xorg xorg-xinit xorg-xinput
+
+# GPU driver
+sudo pacman -S --noconfirm nvidia nvidia-settings
+
+# window manager + switcher
 sudo pacman -S --noconfirm qtile rofi
 yay -S --noconfirm qtile-extras
-# python, psutil
-sudo pacman -S --noconfirm python python-psutil
-# wallpaper, theme, icons, cursor, font
-yay -S --noconfirm catppuccin-gtk-theme-macchiato
-yay -S --noconfirm qogir-cursor-theme-git
-sudo pacman -S --noconfirm nitrogen papirus-icon-theme breeze breeze-gtk noto-fonts-emoji
-sudo pacman -S nerd-fonts
+
+
+# ----- System
+
+# browser
+sudo pacman -S --noconfirm firefox
+
+# file manager + 7zip
+sudo pacman -S --noconfirm thunar gvfs xfce4-settings
+sudo pacman -S --noconfirm ranger ncdu
+sudo pacman -S --noconfirm p7zip
+
+# multimedia (image, screenshot, video) + color picker
+sudo pacman -S --noconfirm feh maim ffmpeg gpick
+
 # task manager
 sudo pacman -S --noconfirm htop
+
+# python, psutil
+sudo pacman -S --noconfirm python python-psutil
+
 # terminal, shell, editor, neofetch
-sudo pacman -S --noconfirm kitty starship neofetch nano
-# file archiver, file manager, image and video player, screenshot
-sudo pacman -S --noconfirm p7zip ranger thunar xfce4-settings gvfs ncdu maim feh ffmpeg
+sudo pacman -S --noconfirm kitty starship nano neofetch
+
+
+# ----- Theme
+
+# cursor 
+yay -S --noconfirm qogir-cursor-theme-git
+
+# font + emojis
+sudo pacman -S nerd-fonts
+sudo pacman -S --noconfirm noto-fonts-emoji
+
+# icons
+sudo pacman -S --noconfirm papirus-icon-theme
+
+# system
+yay -S --noconfirm catppuccin-gtk-theme-macchiato
+sudo pacman -S --noconfirm breeze breeze-gtk
+
+# wallpaper
+sudo pacman -S --noconfirm nitrogen
+
+# ----- Software
 
 # Software
-sudo pacman -S --noconfirm firefox discord qtpass gpick gamemode thunderbird openvpn openresolv wget
+sudo pacman -S --noconfirm discord qtpass gamemode thunderbird openvpn openresolv wget
 sudo pacman -S steam
 yay -S --noconfirm teamspeak
 sudo wget "https://raw.githubusercontent.com/ProtonVPN/scripts/master/update-resolv-conf.sh" -O "/etc/openvpn/update-resolv-conf"
