@@ -101,6 +101,3 @@ nitrogen --restore
 
 # creating xorg.conf
 sudo nvidia-xconfig
-
-# set compose key
-setxkbmap -option compose:ralt
