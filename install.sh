@@ -3,10 +3,10 @@
 # ---------- System Installation ----------
 
 
-# update system
+# system update
 sudo pacman -Syu
 
-# install yay
+# yay installation
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
@@ -37,10 +37,10 @@ yay -S --noconfirm qtile-extras
 # browser
 sudo pacman -S --noconfirm firefox
 
-# file manager + 7zip
+# file manager + 7zip/unrar
 sudo pacman -S --noconfirm thunar gvfs xfce4-settings
 sudo pacman -S --noconfirm ranger ncdu
-sudo pacman -S --noconfirm p7zip
+sudo pacman -S --noconfirm p7zip unrar
 
 # multimedia (image, screenshot, video) + color picker
 sudo pacman -S --noconfirm feh maim ffmpeg gpick
@@ -67,32 +67,24 @@ sudo pacman -S --noconfirm noto-fonts-emoji
 # icons
 sudo pacman -S --noconfirm papirus-icon-theme
 
-# system
+# system theme
 yay -S --noconfirm catppuccin-gtk-theme-macchiato
 sudo pacman -S --noconfirm breeze breeze-gtk
 
 # wallpaper
 sudo pacman -S --noconfirm nitrogen
 
-# ----- Software
 
-# Software
-sudo pacman -S --noconfirm discord qtpass gamemode thunderbird openvpn openresolv wget
-sudo pacman -S steam
-yay -S --noconfirm teamspeak
-sudo wget "https://raw.githubusercontent.com/ProtonVPN/scripts/master/update-resolv-conf.sh" -O "/etc/openvpn/update-resolv-conf"
-sudo chmod +x "/etc/openvpn/update-resolv-conf"
+# ---------- System Configuration ----------
 
-# -----  configs
-
-# copying the configs
+# copying the config files
 cp -r ~/Github/arch/.config/. ~/.config
 cp -r ~/Github/arch/.home/. ~
-chmod +x ~/.config/qtile/autostart.sh
 cp ~/Github/arch/.images/* ~/Pictures
 cp ~/Github/arch/.etc/environment /etc/environment
 
 # compiling the qtile config
+chmod +x ~/.config/qtile/autostart.sh
 python -m py_compile ~/.config/qtile/config.py
 
 # setting up the wallpaper
@@ -101,3 +93,32 @@ nitrogen --restore
 
 # creating xorg.conf
 sudo nvidia-xconfig
+
+
+# ---------- Software Installation ----------
+
+# Discord
+# sudo pacman -S --noconfirm discord
+
+# QTPass + Kleopatra
+sudo pacman -S --noconfirm qtpass kleopatra
+
+# Steam, gamemode, Mangohud
+sudo pacman -S steam
+sudo pacman -S --noconfirm gamemode mangohud
+
+# Teamspeak
+yay -S --noconfirm teamspeak
+
+# Thunderbird
+sudo pacman -S --noconfirm thunderbird
+
+# MullvadVPN
+yay -S mullvad-vpn
+
+# ---------- Archiv ----------
+
+# ProtonVPN / OpenVPN
+# sudo pacman -S --noconfirm wget openvpn openresolv
+# sudo wget "https://raw.githubusercontent.com/ProtonVPN/scripts/master/update-resolv-conf.sh" -O "/etc/openvpn/update-resolv-conf"
+# sudo chmod +x "/etc/openvpn/update-resolv-conf"
