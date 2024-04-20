@@ -41,6 +41,7 @@ keys = [
     Key([mod], "d", lazy.spawn("discord"), desc="Launch discord"),
     Key([mod], "b", lazy.spawn("firefox"), desc="Launch firefox"),
     Key([mod], "m", lazy.spawn("pavucontrol"), desc="Launch audio mixer"),
+    Key([mod], "v", lazy.spawn("mullvad-vpn"), desc="Launch mullvad vpn"),
 
     # Layout hotkeys
 
@@ -169,11 +170,11 @@ screens = [
 		widget.Spacer(
 			length=100
 		),
-                widget.Volume(
-			fmt='󱄠 {}',
-			foreground='#c6a0f6',
-			**decoration_group
-		),
+                #widget.Volume(
+		#	fmt='󱄠 {}',
+		#	foreground='#c6a0f6',
+		#	**decoration_group
+		#),
 		widget.Spacer(
 			length=12
 		),
