@@ -1,0 +1,115 @@
+format = """
+[](#ed8796)\
+$username\
+$sudo\
+[](fg:#ed8796 bg:#f5a97f)\
+$directory\
+[](fg:#f5a97f bg:#eed49f)\
+$git_branch\
+$git_status\
+[](fg:#eed49f bg:#a6da95)\
+$c\
+$python\
+$java\
+$lua\
+$rust\
+$nodejs\
+$dart\
+$golang\
+$kotlin\
+$haskell\
+[](fg:#a6da95 bg:#8aadf4)\
+$time\
+$cmd_duration\
+[ ](fg:#8aadf4)\
+"""
+
+# Uncomment to disable the blank line at the start of the prompt:
+# add_newline = false
+
+[username]
+show_always = true
+#style_user = "bg:#ed8796 fg:#181926"
+#style_root = "bg:#ed8796 fg:#181926"
+#format = "[$user ]($style)"
+format = "[󰄛 ](bg:#ed8796 fg:#181926)"
+
+[sudo]
+disabled = false
+style = "bg:#ed8796 fg:#181926"
+symbol = ""
+format = "[$symbol ]($style)"
+
+[directory]
+style = "bg:#f5a97f fg:#181926"
+format = "[ $path ]($style)"
+truncation_symbol = "…/"
+
+[git_branch]
+symbol = ""
+style = "bg:#eed49f fg:#181926"
+format = "[ $symbol $branch]($style)"
+
+[git_status]
+style = "bg:#eed49f fg:#181926"
+format = "[$all_status$ahead_behind ]($style)"
+
+[c]
+symbol = ""
+style = "bg:#a6da95 fg:#181926"
+format = "[ $symbol ($version) ]($style)"
+
+[python]
+symbol = ""
+style = "bg:#a6da95 fg:#181926"
+format = "[ $symbol ($version) ]($style)"
+
+[java]
+symbol = ""
+style = "bg:#a6da95 fg:#181926"
+format = "[ $symbol ($version) ]($style)"
+
+[lua]
+symbol = ""
+style = "bg:#a6da95 fg:#181926"
+format = "[ $symbol ($version) ]($style)"
+
+[rust]
+symbol = ""
+style = "bg:#a6da95 fg:#181926"
+format = "[ $symbol ($version) ]($style)"
+
+[nodejs]
+symbol = ""
+style = "bg:#a6da95 fg:#181926"
+format = "[ $symbol ($version) ]($style)"
+
+[dart]
+symbol = ""
+style = "bg:#a6da95 fg:#181926"
+format = "[ $symbol ($version) ]($style)"
+
+[golang]
+symbol = ""
+style = "bg:#a6da95 fg:#181926"
+format = "[ $symbol ($version) ]($style)"
+
+[kotlin]
+symbol = ""
+style = "bg:#a6da95 fg:#181926"
+format = "[ $symbol ($version) ]($style)"
+
+[haskell]
+symbol = ""
+style = "bg:#a6da95 fg:#181926"
+format = "[ $symbol ($version) ]($style)"
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:#8aadf4 fg:#181926"
+format = "[  $time ]($style)"
+
+[cmd_duration]
+style = "bg:#8aadf4 fg:#181926"
+format = "[ took $duration ]($style)"
