@@ -85,7 +85,7 @@ groups = [
 ]
 
 layouts = [
-    layout.Columns(border_normal="#4c505e", border_focus="#b7bdf8", border_focus_stack=["#008f39", "#7d9e7f"], border_width=2, margin=[6, 12, 12, 12]),
+    layout.Columns(border_normal="#4c505e", border_focus="#8aadf4", border_focus_stack=["#008f39", "#7d9e7f"], border_width=2, margin=[6, 12, 12, 12]),
     layout.Max(margin=12, border_focus="#b7bdf8", border_width=2),
 ]
 
@@ -126,13 +126,13 @@ extension_defaults = widget_defaults.copy()
 
 decoration_group= {
     "decorations": [
-        RectDecoration(colour="#181825", radius=2, filled=True, group=True)
+        RectDecoration(colour="#24273A55", radius=10, filled=True, group=True)
     ],
     "padding": 8,
 }
 decoration_group2= {
     "decorations": [
-        RectDecoration(colour="#181825", radius=2, filled=True, group=True, extrawidth=10)
+        RectDecoration(colour="#24273A55", radius=10, filled=True, group=True, extrawidth=12)
     ],
     "padding": 8,
 }
@@ -143,26 +143,26 @@ screens = [
             [
                 widget.GroupBox(
 			highlight_method='line',
-			highlight_color='#181825',
+			highlight_color='#24273A00',
 			this_current_screen_border='#b7bdf8',
 			**decoration_group
 		),
 		widget.Spacer(
-			length=12
+			length=14
 		),
                 widget.Systray(
 			icon_size=22,
 			**decoration_group2
 		),
 		widget.Spacer(
-			length=12
+			length=14
 		),
                 widget.Prompt(),
 		widget.Spacer(
 			length=100
 		),
                 widget.TaskList(
-			border='#181825',
+			border='#18182565',
 			highlight_method='block',
 			title_width_method='uniform',
 			padding=6,
@@ -176,7 +176,7 @@ screens = [
 		#	**decoration_group
 		#),
 		widget.Spacer(
-			length=12
+			length=14
 		),
 		widget.NvidiaSensors(
 			format=' {temp}°C', threshold=75, foreground_alert='ff6000',
@@ -184,7 +184,7 @@ screens = [
 			**decoration_group
 		),
 		widget.Spacer(
-			length=12
+			length=14
 		),
                 widget.CPU(
 			format=' {load_percent:2.0f}%',
@@ -197,7 +197,7 @@ screens = [
 			**decoration_group
 		),
 		widget.Spacer(
-			length=12
+			length=14
 		),
                 widget.Memory(
 			format=' {MemUsed:.0f}{mm}/{MemTotal:.0f}{mm}', measure_mem='G',
@@ -205,7 +205,7 @@ screens = [
 			**decoration_group
 		),
 		widget.Spacer(
-			length=12
+			length=14
 		),
                 widget.Net(
 			format='{down:2.0f}{down_suffix} ↓↑ {up:2.0f}{up_suffix}',
@@ -217,7 +217,7 @@ screens = [
 			**decoration_group
 		),
 		widget.Spacer(
-			length=12
+			length=14
 		),
                 widget.Clock(
 			format=" %a, %b %d",
@@ -225,7 +225,7 @@ screens = [
 			**decoration_group
 		),
 		widget.Spacer(
-			length=12
+			length=14
 		),
                 widget.Clock(
 			format=" %H:%M:%S",
@@ -236,7 +236,7 @@ screens = [
             36,
 	  background="#00000000",
 	  margin=[12, 12, 6, 12],
-	  border_radius=0,
+	  border_radius=10,
         ),
         # You can uncomment this variable if you see that on X11 floating resize/moving is laggy
         # x11_drag_polling_rate = 60,
