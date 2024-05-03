@@ -27,7 +27,7 @@ sudo pacman -S --noconfirm picom
 
 # window manager + switcher
 sudo pacman -S --noconfirm rofi
-yay -S --noconfirm qtile qtile-extras
+yay -S --noconfirm qtile-git qtile-extras-git
 
 
 # ----- Configuration
