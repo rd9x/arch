@@ -11,6 +11,9 @@ sudo pacman -S --noconfirm gimp
 # KeepassXC
 sudo pacman -S --noconfirm keepassxc
 
+# Musikcube
+sudo pacman -S --noconfirm musikcube
+
 # Steam, Gamemode, Mangohud
 sudo pacman -S steam
 sudo pacman -S --noconfirm gamemode mangohud
