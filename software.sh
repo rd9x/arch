@@ -10,6 +10,7 @@ sudo pacman -S --noconfirm gimp
 
 # KeepassXC
 sudo pacman -S --noconfirm keepassxc
+cp ~/Github/arch/home/config/keepassxc/keepassxc.ini ~/.config/keepassxc/keepassxc.ini
 
 # Musikcube
 sudo pacman -S --noconfirm musikcube
