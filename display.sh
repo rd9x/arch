@@ -42,6 +42,7 @@ cp ~/Github/arch/home/.xinitrc ~/.xinitrc
 cp ~/Github/arch/home/config/picom/picom.conf ~/.config/picom/picom.conf
 cp ~/Github/arch/home/config/qtile/autostart.sh ~/.config/qtile/autostart.sh
 cp ~/Github/arch/home/config/qtile/config.py ~/.config/qtile/config.py
+cp ~/Github/arch/home/config/rofi/config.rasi ~/.config/rofi/config.rasi
 chmod +x ~/.config/qtile/autostart.sh
 python -m py_compile ~/.config/qtile/config.py
 
