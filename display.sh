@@ -29,6 +29,9 @@ sudo pacman -S --noconfirm picom
 sudo pacman -S --noconfirm rofi
 yay -S --noconfirm qtile-git qtile-extras-git
 
+# wallpaper
+sudo pacman -S --noconfirm nitrogen
+
 
 # ----- Configuration
 
