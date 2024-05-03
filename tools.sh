@@ -24,3 +24,9 @@ sudo pacman -S --noconfirm feh maim ffmpeg gpick
 
 # ----- Configuration Files
 
+cp ~/Github/arch/home/config/htop/htoprc ~/.config/htop/htoprc
+cp ~/Github/arch/home/config/kitty/kitty.conf ~/.config/kitty/kitty.conf
+cp ~/Github/arch/home/config/neofetch/config.conf ~/.config/neofetch/config.conf
+cp ~/Github/arch/home/config/starship.toml ~/.config/starship.toml
+cp ~/Github/arch/home/.nanorc ~/.nanorc
+
