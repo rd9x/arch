@@ -15,3 +15,7 @@ sudo pacman -S --noconfirm papirus-icon-theme
 # system theme
 yay -S --noconfirm catppuccin-gtk-theme-macchiato
 sudo pacman -S --noconfirm breeze breeze-gtk
+
+
+# ----- Configuration Files
+
