@@ -33,6 +33,7 @@ yay -S --noconfirm qtile-git qtile-extras-git
 # ----- Configuration
 
 # .files
+cp ~/Github/arch/home/.asoundrc ~/.asoundrc
 cp ~/Github/arch/home/.bashrc ~/.bashrc
 cp ~/Github/arch/home/.bash_profile ~/.bash_profile
 cp ~/Github/arch/home/.xinitrc ~/.xinitrc
