@@ -5,8 +5,8 @@ from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.dgroups import simple_key_binder
 
-#from qtile_extras import widget
-#from qtile_extras.widget.decorations import RectDecoration
+from qtile_extras import widget
+from qtile_extras.widget.decorations import RectDecoration
 
 # ----------------------------
 # -------- Hotkeys -----------
@@ -123,18 +123,18 @@ widget_defaults = dict(
 )
 extension_defaults = widget_defaults.copy()
 
-#decoration_group= {
-#    "decorations": [
-#        RectDecoration(colour="#24273A55", radius=10, filled=True, group=True)
-#    ],
-#    "padding": 8,
-#}
-#decoration_group2= {
-#    "decorations": [
-#        RectDecoration(colour="#24273A55", radius=10, filled=True, group=True, extrawidth=12)
-#    ],
-#    "padding": 8,
-#}
+decoration_group= {
+    "decorations": [
+        RectDecoration(colour="#24273A55", radius=10, filled=True, group=True)
+    ],
+    "padding": 8,
+}
+decoration_group2= {
+    "decorations": [
+        RectDecoration(colour="#24273A55", radius=10, filled=True, group=True, extrawidth=12)
+    ],
+    "padding": 8,
+}
 
 screens = [
     Screen(
@@ -144,14 +144,14 @@ screens = [
 			highlight_method='line',
 			highlight_color='#24273A00',
 			this_current_screen_border='#b7bdf8',
-			#**decoration_group
+			**decoration_group
 		),
 		widget.Spacer(
 			length=14
 		),
                 widget.Systray(
 			icon_size=22,
-			#**decoration_group2
+			**decoration_group2
 		),
 		widget.Spacer(
 			length=14
@@ -180,7 +180,7 @@ screens = [
 		widget.NvidiaSensors(
 			format=' {temp}°C', threshold=75, foreground_alert='ff6000',
 			foreground="#8aadf4",
-			#**decoration_group
+			**decoration_group
 		),
 		widget.Spacer(
 			length=14
@@ -188,12 +188,12 @@ screens = [
                 widget.CPU(
 			format=' {load_percent:2.0f}%',
 			foreground="#8aadf4",
-			#**decoration_group
+			**decoration_group
 		),
                 widget.ThermalSensor(
 			format='{temp:.0f}{unit}',
 			foreground="#8aadf4",
-			#**decoration_group
+			**decoration_group
 		),
 		widget.Spacer(
 			length=14
@@ -201,7 +201,7 @@ screens = [
                 widget.Memory(
 			format=' {MemUsed:.0f}{mm}/{MemTotal:.0f}{mm}', measure_mem='G',
 			foreground="#a6da95",
-			#**decoration_group
+			**decoration_group
 		),
 		widget.Spacer(
 			length=14
@@ -213,7 +213,7 @@ screens = [
 			prefix='M',
 			scroll='True',
 			scroll_fixed_width='True',
-			#**decoration_group
+			**decoration_group
 		),
 		widget.Spacer(
 			length=14
@@ -221,7 +221,7 @@ screens = [
                 widget.Clock(
 			format=" %a, %b %d",
 			foreground="#f5a97f",
-			#**decoration_group
+			**decoration_group
 		),
 		widget.Spacer(
 			length=14
@@ -229,7 +229,7 @@ screens = [
                 widget.Clock(
 			format=" %H:%M:%S",
 			foreground="#ed8796",
-			#**decoration_group
+			**decoration_group
 		),
             ],
             36,
