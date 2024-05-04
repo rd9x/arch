@@ -20,7 +20,8 @@ sudo pacman -S --noconfirm pipewire-pulse alsa-utils pavucontrol
 sudo pacman -S --noconfirm base-devel xorg xorg-xinit xorg-xinput
 
 # GPU driver
-sudo pacman -S --noconfirm nvidia nvidia-settings
+sudo pacman -S --noconfirm nvidia-dkms nvidia-settings nvidia-utils lib32-nvidia-utils
+sudo pacman -S --noconfirm vulkan-icd-loader lib32-vulkan-icd-loader
 
 # compositor
 sudo pacman -S --noconfirm picom 
