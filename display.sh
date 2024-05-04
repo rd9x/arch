@@ -34,7 +34,7 @@ yay -S --noconfirm --needed qtile-git qtile-extras-git
 sudo pacman -S --noconfirm --needed nitrogen
 
 # rsync
-sudo pacman -S --noconfirm --needed rsnyc
+sudo pacman -S --noconfirm --needed rsync
 
 # ----- Configuration
 
