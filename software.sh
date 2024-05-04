@@ -2,6 +2,10 @@
 
 # ---------- Software Installation ----------
 
+# Steam, Gamemode, Mangohud
+sudo pacman -S steam
+sudo pacman -S --noconfirm gamemode mangohud
+
 # Discord
 sudo pacman -S --noconfirm discord
 
@@ -14,10 +18,6 @@ cp ~/Github/arch/home/config/keepassxc/keepassxc.ini ~/.config/keepassxc/keepass
 
 # Musikcube
 sudo pacman -S --noconfirm musikcube
-
-# Steam, Gamemode, Mangohud
-sudo pacman -S steam
-sudo pacman -S --noconfirm gamemode mangohud
 
 # Thunderbird
 sudo pacman -S --noconfirm thunderbird
