@@ -33,6 +33,8 @@ yay -S --noconfirm --needed qtile-git qtile-extras-git
 # wallpaper
 sudo pacman -S --noconfirm --needed nitrogen
 
+# rsync
+sudo pacman -S --noconfirm --needed rsnyc
 
 # ----- Configuration
 
@@ -56,4 +58,4 @@ nitrogen --restore
 
 # creating xorg.conf and start X11
 sudo nvidia-xconfig
-startx
+# startx
