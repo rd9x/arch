@@ -22,6 +22,9 @@ sudo pacman -S --noconfirm --needed p7zip unrar
 # multimedia (image, screenshot, video) + color picker
 sudo pacman -S --noconfirm --needed feh maim ffmpeg gpick
 
+# backup
+sudo pacman -S --noconfirm --needed timeshift
+
 # ----- Configuration Files
 
 rsync -r ~/Github/arch/home/config/htop/ ~/.config/htop
