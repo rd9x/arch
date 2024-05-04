@@ -3,27 +3,27 @@
 # ---------- Software Installation ----------
 
 # Steam, Gamemode, Mangohud
-sudo pacman -S steam
-sudo pacman -S --noconfirm gamemode mangohud
+sudo pacman -S --needed steam
+sudo pacman -S --noconfirm --needed gamemode mangohud
 
 # Discord
-sudo pacman -S --noconfirm discord
+sudo pacman -S --noconfirm --needed discord
 
 # Gimp
-sudo pacman -S --noconfirm gimp
+sudo pacman -S --noconfirm --needed gimp
 
 # KeepassXC
-sudo pacman -S --noconfirm keepassxc
-cp ~/Github/arch/home/config/keepassxc/keepassxc.ini ~/.config/keepassxc/keepassxc.ini
+sudo pacman -S --noconfirm --needed keepassxc
+rsync -r ~/Github/arch/home/config/keepassxc/ ~/.config/keepassxc
 
 # Musikcube
-sudo pacman -S --noconfirm musikcube
+sudo pacman -S --noconfirm --needed musikcube
 
 # Thunderbird
-sudo pacman -S --noconfirm thunderbird
+sudo pacman -S --noconfirm --needed thunderbird
 
 # Teamspeak
-yay -S --noconfirm teamspeak
+yay -S --noconfirm --needed teamspeak
 
 # MullvadVPN
 yay -S mullvad-vpn
