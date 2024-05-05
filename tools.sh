@@ -15,7 +15,7 @@ sudo pacman -S --noconfirm --needed python python-psutil
 sudo pacman -S --noconfirm --needed firefox
 
 # file manager + 7zip/unrar
-sudo pacman -S --noconfirm --needed thunar gvfs xfce4-settings
+sudo pacman -S --noconfirm --needed thunar thunar-volman gvfs xfce4-settings
 sudo pacman -S --noconfirm --needed ranger ncdu
 sudo pacman -S --noconfirm --needed p7zip unrar
 
