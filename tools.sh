@@ -30,6 +30,7 @@ sudo pacman -S --noconfirm --needed timeshift
 rsync -r ~/Github/arch/home/config/htop/ ~/.config/htop
 rsync -r ~/Github/arch/home/config/kitty/ ~/.config/kitty
 rsync -r ~/Github/arch/home/config/neofetch/ ~/.config/neofetch
+rsync -r ~/Github/arch/home/config/xfce4/ ~/.config/xfce4
 rsync ~/Github/arch/home/config/starship.toml ~/.config
 rsync ~/Github/arch/home/.nanorc ~/
 
