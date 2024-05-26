@@ -16,6 +16,8 @@ sudo pacman -S --noconfirm --needed papirus-icon-theme
 yay -S --noconfirm --needed catppuccin-gtk-theme-macchiato
 sudo pacman -S --noconfirm --needed breeze breeze-gtk
 
+# sddm theme
+sudo pacman -S --noconfirm --needed gst-libav phonon-qt5-gstreamer gst-plugins-good qt5-quickcontrols qt5-graphicaleffects qt5-multimedia
 
 # ----- Configuration Files
 
