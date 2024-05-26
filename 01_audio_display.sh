@@ -62,7 +62,8 @@ nitrogen ~/Pictures/ --random --set-scaled --save
 nitrogen --restore
 
 # sddm theme and enabling service
-rsync -r ~/Github/aerial-sddm-theme/ /usr/share/sddm/themes/rd9x
+sudo rsync -r ~/Github/aerial-sddm-theme/ /usr/share/sddm/themes/rd9x
+sudo rsync -r ~/Github/arch/etc/sddm.conf.d/ /etc/sddm.conf.f
 sudo systemctl enable sddm.service
 
 # creating xorg.conf and start X11
