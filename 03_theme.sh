@@ -25,6 +25,7 @@ rsync ~/Github/arch/home/.gtkrc-2.0 ~/
 rsync ~/Github/arch/home/.profile ~/
 rsync -r ~/Github/arch/home/config/fontconfig/ ~/.config/fontconfig
 rsync -r ~/Github/arch/home/config/gtk-3.0/ ~/.config/gtk-3.0
+rsync -r ~/Github/arch/home/config/gtk-4.0/ ~/.config/gtk-4.0
 rsync -r ~/Github/arch/home/config/qt5ct/ ~/.config/qt5ct
 sudo rsync ~/Github/arch/etc/environment /etc
 sudo rsync ~/Github/arch/etc/sddm.conf.d/ /etc/sddm.conf.d
