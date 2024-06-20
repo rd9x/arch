@@ -71,7 +71,7 @@ gext install 5389 # screen rotate
 sudo pacman -S --noconfirm --needed starship nano neofetch tldr
 
 # multimedia (image, screenshot, video)
-sudo pacman -S --noconfirm --needed feh maim ffmpeg
+sudo pacman -S --noconfirm --needed feh maim ffmpeg vlc
 
 # backup
 sudo pacman -S --noconfirm --needed timeshift
