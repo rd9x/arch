@@ -57,6 +57,9 @@ sudo pacman -S --noconfirm --needed gnome-console gnome-logs gnome-system-monito
 sudo pacman -S --noconfirm --needed gnome-calender gnome-contacts
 sudo pacman -S --noconfirm --needed gnome-music loupe
 
+# gnome extensions
+yay -S --noconfirm gnome-extensions-cli
+
 
 # shell, editor, neofetch
 sudo pacman -S --noconfirm --needed starship nano neofetch tldr
