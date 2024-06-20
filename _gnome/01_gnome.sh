@@ -56,13 +56,16 @@ sudo pacman -S --noconfirm --needed nautilus sushi epiphany
 sudo pacman -S --noconfirm --needed gnome-console gnome-logs gnome-system-monitor gnome-text-editor
 sudo pacman -S --noconfirm --needed gnome-calender gnome-contacts
 sudo pacman -S --noconfirm --needed gnome-music loupe
+gsettings set org.gnome.desktop.wm.preferences resize-with-right-button true
 
 # gnome extensions
 yay -S --noconfirm gnome-extensions-cli
-gext install 6
-gext install 8
-gext install 750
-gext install 5389
+gext install 1460 # vitals
+gext install 2986 # runcat
+gext install 3193 # blur my shell
+gext install 3843 # just perfection
+gext install 4679 # burn my windows
+gext install 5389 # screen rotate
 
 # shell, editor, neofetch
 sudo pacman -S --noconfirm --needed starship nano neofetch tldr
