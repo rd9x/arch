@@ -59,7 +59,10 @@ sudo pacman -S --noconfirm --needed gnome-music loupe
 
 # gnome extensions
 yay -S --noconfirm gnome-extensions-cli
-
+gext install 6
+gext install 8
+gext install 750
+gext install 5389
 
 # shell, editor, neofetch
 sudo pacman -S --noconfirm --needed starship nano neofetch tldr
