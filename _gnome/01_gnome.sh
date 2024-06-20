@@ -43,6 +43,9 @@ sudo pacman -S --noconfirm --needed picom
 # login manager
 sudo pacman -S --noconfirm --needed sddm
 
+# tablet support
+sudo pacman -S --noconfirm --needed xf86-input-wacom iio-sensor-proxy
+
 # +--------------------+
 # |  Gnome & Software  |
 # +--------------------+
