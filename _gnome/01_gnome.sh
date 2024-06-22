@@ -16,7 +16,7 @@ cd yay && makepkg -si
 yay -Y --gendb
 
 # clone sddm theme
-cd ~/Github && git clone https://github.com/rd9x/aerial-sddm-theme
+# cd ~/Github && git clone https://github.com/rd9x/aerial-sddm-theme
 
 
 # +---------------------+
@@ -37,12 +37,16 @@ sudo pacman -S --noconfirm --needed qt5-wayland qt6-wayland
 sudo pacman -S --noconfirm --needed xorg xorg-xinit xorg-xinput
 sudo pacman -S --noconfirm --needed xorg-xwayland
 
-# compositor
+# X11 compositor
 sudo pacman -S --noconfirm --needed picom
 
 # login manager
-# sudo pacman -S --noconfirm --needed sddm
 sudo pacman -S --noconfirm --needed gdm
+sudo systemctl enable gdm.service
+# sudo pacman -S --noconfirm --needed sddm
+# sudo rsync -r ~/Github/aerial-sddm-theme/ /usr/share/sddm/themes/rd9x
+# sudo rsync -r ~/Github/arch/etc/sddm.conf.d/ /etc/sddm.conf.f
+# sudo systemctl enable sddm.service
 
 # tablet support
 sudo pacman -S --noconfirm --needed xf86-input-wacom iio-sensor-proxy
@@ -113,11 +117,3 @@ rsync -r ~/Github/arch/home/.local/share/applications/ ~/.local/share/applicatio
 
 # copy images
 rsync -r ~/Github/arch/home/Pictures/ ~/Pictures
-
-# enabling services
-sudo systemctl enable gdm.service
-
-# sddm theme and enabling service
-# sudo rsync -r ~/Github/aerial-sddm-theme/ /usr/share/sddm/themes/rd9x
-# sudo rsync -r ~/Github/arch/etc/sddm.conf.d/ /etc/sddm.conf.f
-# sudo systemctl enable sddm.service
