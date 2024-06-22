@@ -309,6 +309,38 @@ case ${answer:0:1} in
     ;;
 esac
 
+# install thunderbird
+echo '▒▒   [E-Mail]'
+read -p "▒▒   Install Thunderbird? (y/N) " answer
+case ${answer:0:1} in
+    y|Y )
+	echo '▒▒   Installing..'
+	sudo pacman -S --noconfirm --needed thunderbird protonmail-bridge &> /dev/null
+	echo '▒▒   done'
+	echo '▒▒'
+    ;;
+    * )
+	echo '▒▒   skipped'
+	echo '▒▒'
+    ;;
+esac
+
+# install gimp
+echo '▒▒   [Photo Editing]'
+read -p "▒▒   Install Gimp? (y/N) " answer
+case ${answer:0:1} in
+    y|Y )
+	echo '▒▒   Installing..'
+	sudo pacman -S --noconfirm --needed gimp &> /dev/null
+	echo '▒▒   done'
+	echo '▒▒'
+    ;;
+    * )
+	echo '▒▒   skipped'
+	echo '▒▒'
+    ;;
+esac
+
 # install mullvad vpn
 echo '▒▒   [VPN]'
 read -p "▒▒   Install Mullvad VPN? (y/N) " answer
