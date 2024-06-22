@@ -185,7 +185,7 @@ case ${answer:0:1} in
     ;;
     g|G )
 	echo '▒▒   Installing Gnome..'
-	sudo pacman -S --noconfirm --needed gnome-shell gnome-shell-extensions gnome-control-center gnome-keyring &> /dev/null
+	sudo pacman -S --noconfirm --needed gnome-shell gnome-shell-extensions gnome-control-center gnome-keyring gnome-tweaks &> /dev/null
 	sudo pacman -S --noconfirm --needed gnome-console gnome-logs gnome-system-monitor gnome-text-editor gnome-backgrounds &> /dev/null
 	sudo pacman -S --noconfirm --needed networkmanager xdg-user-dirs-gtk xdg-desktop-portal-gnome &> /dev/null
 	sudo pacman -S --noconfirm --needed gnome-calendar gnome-contacts gnome-music loupe  &> /dev/null
