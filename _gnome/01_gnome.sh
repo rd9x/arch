@@ -61,7 +61,7 @@ sudo pacman -S --noconfirm --needed xdg-user-dirs-gtk xdg-desktop-portal-gnome
 sudo pacman -S --noconfirm --needed gnome-console gnome-logs gnome-system-monitor gnome-text-editor
 sudo pacman -S --noconfirm --needed gnome-calender gnome-contacts
 sudo pacman -S --noconfirm --needed gnome-music loupe
-sudo pacman -S --noconfirm --needed nautilus sushi epiphany
+sudo pacman -S --noconfirm --needed nautilus sushi epiphany secrets seahorse
 
 # enable resizing with right click
 gsettings set org.gnome.desktop.wm.preferences resize-with-right-button true
