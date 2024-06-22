@@ -41,7 +41,8 @@ sudo pacman -S --noconfirm --needed xorg-xwayland
 sudo pacman -S --noconfirm --needed picom
 
 # login manager
-sudo pacman -S --noconfirm --needed sddm
+# sudo pacman -S --noconfirm --needed sddm
+sudo pacman -S --noconfirm --needed gdm
 
 # tablet support
 sudo pacman -S --noconfirm --needed xf86-input-wacom iio-sensor-proxy
@@ -52,14 +53,18 @@ sudo pacman -S --noconfirm --needed xf86-input-wacom iio-sensor-proxy
 
 # gnome
 sudo pacman -S --noconfirm --needed gnome-shell gnome-shell-extensions gnome-control-center gnome-keyring networkmanager xdg-user-dirs-gtk xdg-desktop-portal-gnome
-sudo pacman -S --noconfirm --needed nautilus sushi epiphany
+sudo pacman -S --noconfirm --needed xdg-user-dirs-gtk xdg-desktop-portal-gnome
 sudo pacman -S --noconfirm --needed gnome-console gnome-logs gnome-system-monitor gnome-text-editor
 sudo pacman -S --noconfirm --needed gnome-calender gnome-contacts
 sudo pacman -S --noconfirm --needed gnome-music loupe
+sudo pacman -S --noconfirm --needed nautilus sushi epiphany
+
+# enable resizing with right click
 gsettings set org.gnome.desktop.wm.preferences resize-with-right-button true
 
 # gnome extensions
 yay -S --noconfirm gnome-extensions-cli
+yay -S --noconfirm extension-manager
 gext install 1460 # vitals
 gext install 2986 # runcat
 gext install 3193 # blur my shell
@@ -77,11 +82,11 @@ sudo pacman -S --noconfirm --needed feh maim ffmpeg vlc
 sudo pacman -S --noconfirm --needed timeshift
 
 # tools
-sudo pacman -S --noconfirm --needed ranger ncdu gvfs gpick p7zip unrar
+sudo pacman -S --noconfirm --needed ranger ncdu gvfs gpick p7zip unrar rsync
 
 # optional
 # yay -S --noconfirm --needed pamac-aur
-# sudo pacman -S --noconfirm --needed gnome-software
+# sudo pacman -S --noconfirm --needed gnome-software flatpak
 
 # webcam
 # sudo pacman -S --noconfirm --needed snapshot
@@ -89,9 +94,6 @@ sudo pacman -S --noconfirm --needed ranger ncdu gvfs gpick p7zip unrar
 # +-----------------------+
 # |  Configuration Files  |
 # +-----------------------+
-
-# rsync
-sudo pacman -S --noconfirm --needed rsync
 
 # .files
 rsync ~/Github/arch/home/.bashrc ~/
@@ -112,7 +114,10 @@ rsync -r ~/Github/arch/home/.local/share/applications/ ~/.local/share/applicatio
 # copy images
 rsync -r ~/Github/arch/home/Pictures/ ~/Pictures
 
+# enabling services
+sudo systemctl enable gdm.service
+
 # sddm theme and enabling service
-sudo rsync -r ~/Github/aerial-sddm-theme/ /usr/share/sddm/themes/rd9x
-sudo rsync -r ~/Github/arch/etc/sddm.conf.d/ /etc/sddm.conf.f
-sudo systemctl enable sddm.service
+# sudo rsync -r ~/Github/aerial-sddm-theme/ /usr/share/sddm/themes/rd9x
+# sudo rsync -r ~/Github/arch/etc/sddm.conf.d/ /etc/sddm.conf.f
+# sudo systemctl enable sddm.service
