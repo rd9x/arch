@@ -1,0 +1,14 @@
+[Desktop Entry]
+# Name=Software Installer
+Name=System Update
+Comment=Install selected software on the system
+Comment[de]=Ausgewählte Software auf dem System installieren
+Categories=System;
+Exec=pamac-installer %F
+Terminal=false
+Type=Application
+Icon=system-software-install
+StartupNotify=true
+NoDisplay=true
+MimeType=application/x-alpm-package;
+NoDisplay=true
