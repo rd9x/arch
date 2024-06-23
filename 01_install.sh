@@ -204,6 +204,7 @@ case ${answer:0:1} in
         gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark' &> /dev/null
 	gsettings set org.gnome.desktop.interface document-font-name 'Comfortaa 11' &> /dev/null
 	gsettings set org.gnome.desktop.interface font-name 'Comfortaa 11' &> /dev/null
+ 	gsettings set org.gnome.desktop.peripherals.mouse accel-profile flat &> /dev/null
  	rsync -r ~/Github/arch/home/.local/share/applications/ ~/.local/share/applications &> /dev/null
 	rsync -r ~/Github/arch/Pictures/ ~/Pictures &> /dev/null
 	echo '▒▒   done'
