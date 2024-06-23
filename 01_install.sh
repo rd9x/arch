@@ -205,6 +205,9 @@ case ${answer:0:1} in
 	gsettings set org.gnome.desktop.interface document-font-name 'Comfortaa 11' &> /dev/null
 	gsettings set org.gnome.desktop.interface font-name 'Comfortaa 11' &> /dev/null
  	gsettings set org.gnome.desktop.peripherals.mouse accel-profile flat &> /dev/null
+	dconf load /org/gnome/settings-daemon/plugins/media-keys/ < ~/Github/arch/dconf/kb_media &> /dev/null
+	dconf load /org/gnome/shell/keybindings/ < ~/Github/arch/dconf/kb_shell &> /dev/null
+	dconf load /org/gnome/desktop/wm/keybindings/ < ~/Github/arch/dconf/kb_wm &> /dev/null
  	rsync -r ~/Github/arch/home/.local/share/applications/ ~/.local/share/applications &> /dev/null
 	rsync -r ~/Github/arch/Pictures/ ~/Pictures &> /dev/null
 	echo '▒▒   done'
