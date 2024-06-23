@@ -276,6 +276,18 @@ sudo pacman -S nerd-fonts
 echo '▒▒   done'
 echo '▒▒'
 
+# gnome theme tweaks againg
+gsettings set org.gnome.desktop.wm.preferences resize-with-right-button true &> /dev/null
+gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close" &> /dev/null
+gsettings set org.gnome.mutter center-new-windows true &> /dev/null
+gsettings set org.gnome.desktop.wm.preferences focus-mode sloppy &> /dev/null
+gsettings set org.gnome.desktop.wm.preferences auto-raise true &> /dev/null
+gsettings set org.gnome.desktop.interface cursor-theme 'Qogir-dark-cursors' &> /dev/null
+gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark' &> /dev/null
+gsettings set org.gnome.desktop.interface document-font-name 'Comfortaa 11' &> /dev/null
+gsettings set org.gnome.desktop.interface font-name 'Comfortaa 11' &> /dev/null
+gsettings set org.gnome.desktop.peripherals.mouse accel-profile flat &> /dev/null
+
 echo '▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒'
 echo '▒▒  ____         __ _                            ▒▒'
 echo '▒▒ / ___|  ___  / _| |___      ____ _ _ __ ___   ▒▒'
