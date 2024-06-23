@@ -196,7 +196,15 @@ case ${answer:0:1} in
  	sudo pacman -S --noconfirm --needed snapshot &> /dev/null
 	echo '▒▒   Gnome Tweaks and copying background images..'
  	gsettings set org.gnome.desktop.wm.preferences resize-with-right-button true &> /dev/null
-	rsync -r ~/Github/arch/home/.local/share/applications/ ~/.local/share/applications &> /dev/null
+   	gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close" &> /dev/null
+    	gsettings set org.gnome.mutter center-new-windows true &> /dev/null
+	gsettings set org.gnome.desktop.wm.preferences focus-mode sloppy &> /dev/null
+     	gsettings set org.gnome.desktop.wm.preferences auto-raise true &> /dev/null
+	gsettings set org.gnome.desktop.interface cursor-theme 'Qogir-dark-cursors' &> /dev/null
+        gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark' &> /dev/null
+	gsettings set org.gnome.desktop.interface document-font-name 'Comfortaa 11' &> /dev/null
+	gsettings set org.gnome.desktop.interface font-name 'Comfortaa 11' &> /dev/null
+ 	rsync -r ~/Github/arch/home/.local/share/applications/ ~/.local/share/applications &> /dev/null
 	rsync -r ~/Github/arch/Pictures/ ~/Pictures &> /dev/null
 	echo '▒▒   done'
 	echo '▒▒'
@@ -261,7 +269,8 @@ echo '▒▒'
 # install font
 echo '▒▒   [Font]'
 echo '▒▒   Installing font..'
-sudo pacman -S --noconfirm --needed noto-fonts-emoji &> /dev/null
+sudo pacman -S --noconfirm --needed noto-fonts noto-fonts-cjk noto-fonts-emoji &> /dev/null
+yay -S --noconfirm --needed ttf-comfortaa &> /dev/null
 sudo pacman -S nerd-fonts
 echo '▒▒   done'
 echo '▒▒'
