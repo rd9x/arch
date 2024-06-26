@@ -64,6 +64,16 @@ sudo pacman -S --noconfirm --needed feh maim ffmpeg vlc p7zip unrar gvfs gpick &
 echo '▒▒   done'
 echo '▒▒'
 
+# install keyd
+echo '▒▒   [Keyboard]'
+echo '▒▒   Installing keyd..'
+sudo pacman -S --noconfirm --needed keyd &> /dev/null
+sudo rsync -r ~/Github/arch/etc/keyd/ /etc/keyd &> /dev/null
+systemctl enable keyd &> /dev/null
+systemctl start keyd &> /dev/null
+echo '▒▒   done'
+echo '▒▒'
+
 # install shell, editor, neofetch
 echo '▒▒   [Shell]'
 echo '▒▒   Installing Starship and Neofetch..'
