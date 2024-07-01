@@ -77,7 +77,7 @@ echo '▒▒'
 # install shell, editor, neofetch
 echo '▒▒   [Shell]'
 echo '▒▒   Installing Starship and Neofetch..'
-sudo pacman -S --noconfirm --needed starship nano neofetch tldr ncdu &> /dev/null
+sudo pacman -S --noconfirm --needed starship nano neofetch tldr ncdu ntfs-3g &> /dev/null
 echo '▒▒   Copying config files..'
 rsync -r ~/Github/arch/home/config/htop/ ~/.config/htop &> /dev/null
 rsync -r ~/Github/arch/home/config/neofetch/ ~/.config/neofetch &> /dev/null
@@ -201,9 +201,9 @@ case ${answer:0:1} in
 	sudo pacman -S --noconfirm --needed gnome-calendar gnome-contacts gnome-music loupe  &> /dev/null
 	sudo pacman -S --noconfirm --needed nautilus sushi epiphany secrets seahorse  &> /dev/null
 	yay -S --noconfirm --needed gnome-extensions-cli extension-manager &> /dev/null
- 	yay -S --noconfirm --needed pamac-aur &> /dev/null
- 	sudo pacman -S --noconfirm --needed gnome-software flatpak &> /dev/null
- 	sudo pacman -S --noconfirm --needed snapshot &> /dev/null
+# 	yay -S --noconfirm --needed pamac-aur &> /dev/null
+# 	sudo pacman -S --noconfirm --needed gnome-software flatpak &> /dev/null
+# 	sudo pacman -S --noconfirm --needed snapshot &> /dev/null
 	echo '▒▒   Gnome Tweaks and copying background images..'
  	gsettings set org.gnome.desktop.wm.preferences resize-with-right-button true &> /dev/null
    	gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close" &> /dev/null
