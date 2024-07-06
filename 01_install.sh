@@ -190,7 +190,7 @@ case ${answer:0:1} in
 	sudo pacman -S --noconfirm --needed gnome-console gnome-logs gnome-system-monitor gnome-backgrounds gnome-text-editor &> /dev/null
 	sudo pacman -S --noconfirm --needed networkmanager xdg-user-dirs-gtk xdg-desktop-portal-gnome &> /dev/null
 	sudo pacman -S --noconfirm --needed gnome-calendar gnome-contacts gnome-music loupe  &> /dev/null
-	sudo pacman -S --noconfirm --needed nautilus sushi secrets seahorse  &> /dev/null
+	sudo pacman -S --noconfirm --needed firefox nautilus sushi secrets seahorse  &> /dev/null
 	yay -S --noconfirm --needed gnome-extensions-cli extension-manager &> /dev/null
 # 	yay -S --noconfirm --needed pamac-aur &> /dev/null
 # 	sudo pacman -S --noconfirm --needed gnome-software flatpak &> /dev/null
