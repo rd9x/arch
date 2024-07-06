@@ -1,5 +1,5 @@
 .nautilus-window .navigation-sidebar > .sidebar-row:nth-child(1), /* hides recent button */
-.nautilus-window .navigation-sidebar > .sidebar-row:nth-child(4) /* hides desktop button */   
+.nautilus-window .navigation-sidebar > .sidebar-row:nth-child(4x) /* hides desktop button */   
 { 
   min-height:0;
   font-size: 0;
