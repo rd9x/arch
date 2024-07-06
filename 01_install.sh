@@ -1,5 +1,5 @@
 #!/bin/bash
-
+clear
 echo
 echo '▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒'
 echo '▒▒  ____            _                  ▒▒'
@@ -12,33 +12,28 @@ echo '▒▒                                     ▒▒'
 echo '▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒'
 echo '▒▒'
 
-# update system
+# update system, install headers and clone repos
 echo '▒▒   Updating system..'
 sudo pacman -Syu &> /dev/null
-echo '▒▒   done'
-echo '▒▒'
-
-# install headers
 echo '▒▒   Installing linux headers..'
 sudo pacman -S --noconfirm --needed base-devel linux-headers &> /dev/null
+echo '▒▒   Cloning github repos..'
+cd ~/Github &> /dev/null
+git clone https://aur.archlinux.org/yay.git &> /dev/null
+git clone https://github.com/rd9x/aerial-sddm-theme &> /dev/null
+git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git --depth=1 &> /dev/null
 echo '▒▒   done'
 echo '▒▒'
 
 # install yay
 echo '▒▒   Installing yay..'
-cd ~/Github &> /dev/null
-git clone https://aur.archlinux.org/yay.git &> /dev/null
 cd yay &> /dev/null
 makepkg -si
 yay -Y --gendb
 echo '▒▒   done'
 echo '▒▒'
 
-# clone sddm theme
-echo '▒▒   Cloning sddm theme repo..'
-cd ~/Github &> /dev/null
-git clone https://github.com/rd9x/aerial-sddm-theme &> /dev/null
-echo '▒▒   done'
+
 echo '▒▒'
 echo '▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒'
 echo '▒▒  _____           _       ▒▒'
@@ -267,8 +262,10 @@ echo '▒▒'
 
 # install theme
 echo '▒▒   [Theme]'
-echo '▒▒   Installing Breeze and Adwaita..'
+echo '▒▒   Installing Whitesur, Breeze and Adwaita..'
 sudo pacman -S --noconfirm --needed breeze breeze-gtk gnome-themes-extra qt5ct &> /dev/null
+cd ~/Github/WhiteSur-gtk-theme &> /dev/null
+./install.sh &> /dev/null
 echo '▒▒   Copying config files..'
 rsync ~/Github/arch/home/.gtkrc-2.0.mine ~/ &> /dev/null
 rsync ~/Github/arch/home/.gtkrc-2.0 ~/ &> /dev/null
