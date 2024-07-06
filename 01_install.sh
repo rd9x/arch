@@ -11,7 +11,9 @@ echo '▒▒        |___/                        ▒▒'
 echo '▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒'
 echo '▒▒'
 
-# update system, install headers and clone repos
+
+# ~~ update system, install linux headers and clone github repos
+
 echo '▒▒   Updating system..'
 sudo pacman -Syu &> /dev/null
 echo '▒▒   Installing linux headers..'
@@ -23,12 +25,16 @@ git clone https://github.com/rd9x/aerial-sddm-theme &> /dev/null
 git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git --depth=1 &> /dev/null
 echo '▒▒'
 
-# install yay
+
+# ~~ install yay
+
 echo '▒▒   Installing yay..'
 cd yay &> /dev/null
 makepkg -si
 yay -Y --gendb
 clear
+
+
 echo '▒▒'
 echo '▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒'
 echo '▒▒  _____           _       ▒▒'
@@ -40,28 +46,25 @@ echo '▒▒                          ▒▒'
 echo '▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒'
 echo '▒▒'
 
-# backup
+
+# ~~ install backup; timeshift
+
 echo '▒▒   [Backup]'
 echo '▒▒   Installing Timeshift..'
 sudo pacman -S --noconfirm --needed timeshift &> /dev/null
 echo '▒▒'
 
-# multimedia
+
+# ~~ install multimedia support
+
 echo '▒▒   [Multimedia]'
 echo '▒▒   Installing multimedia support..'
 sudo pacman -S --noconfirm --needed feh maim ffmpeg vlc p7zip unrar gvfs gpick &> /dev/null
 echo '▒▒'
 
-# install keyd
-echo '▒▒   [Keyboard]'
-echo '▒▒   Installing keyd..'
-sudo pacman -S --noconfirm --needed keyd &> /dev/null
-sudo rsync -r ~/Github/arch/etc/keyd/ /etc/keyd &> /dev/null
-systemctl enable keyd &> /dev/null
-systemctl start keyd &> /dev/null
-echo '▒▒'
 
-# shell, editor, neofetch
+# ~~ install shell, editor, neofetch
+
 echo '▒▒   [Shell]'
 echo '▒▒   Installing Starship and Neofetch..'
 sudo pacman -S --noconfirm --needed starship nano neofetch tldr ncdu ntfs-3g figlet ranger &> /dev/null
@@ -71,6 +74,8 @@ rsync ~/Github/arch/home/config/starship.toml ~/.config &> /dev/null
 rsync ~/Github/arch/home/.bashrc ~/ &> /dev/null
 rsync ~/Github/arch/home/.bash_profile ~/ &> /dev/null
 rsync ~/Github/arch/home/.nanorc ~/ &> /dev/null
+
+
 echo '▒▒'
 echo '▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒'
 echo '▒▒     _             _ _                         _   ____  _           _              ▒▒'
@@ -82,13 +87,17 @@ echo '▒▒                                                              |_|   
 echo '▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒'
 echo '▒▒'
 
-# install pipewire and alsa utilities
+
+# ~~ install audio; pipewire
+
 echo '▒▒   [Audio]'
 echo '▒▒   Installing Pipewire and Alsa Utilities..'
 sudo pacman -S --noconfirm --needed pipewire pipewire-pulse wireplumber alsa-utils pavucontrol &> /dev/null
 echo '▒▒'
 
-# install X11
+
+# ~~ install X11
+
 echo '▒▒   [Display Server]'
 echo '▒▒   Installing X11..'
 sudo pacman -S --noconfirm --needed xorg xorg-xinit xorg-xinput &> /dev/null
@@ -97,14 +106,9 @@ sudo pacman -S --noconfirm --needed xorg-wayland qt5-wayland qt6-wayland &> /dev
 rsync ~/Github/arch/home/.xinitrc ~/ &> /dev/null
 echo '▒▒'
 
-# install picom
-echo '▒▒   [Compositor]'
-echo '▒▒   Installing Picom..'
-sudo pacman -S --noconfirm --needed picom &> /dev/null
-rsync ~/Github/arch/home/config/picom/ ~/ &> /dev/null
-echo '▒▒'
 
-# install GPU drivers
+# ~~ install GPU drivers
+
 echo '▒▒   [GPU]'
 read -p "▒▒   Install NVIDIA drivers? (y/N) " answer
 case ${answer:0:1} in
@@ -122,7 +126,9 @@ case ${answer:0:1} in
     ;;
 esac
 
-# install login manager
+
+# ~~ install login manager
+
 echo '▒▒   [Login Manager]'
 read -p "▒▒   Install (S)DDM or (G)DM? " answer
 case ${answer:0:1} in
@@ -143,27 +149,42 @@ case ${answer:0:1} in
     ;;
 esac
 
-# install window manager
+
+# ~~ install window manager; qtile
+
 echo '▒▒   [Window Manager]'
-read -p "▒▒   Install (Q)tile or (G)nome? " answer
+read -p "▒▒   Install Qtile? (y/N) " answer
 case ${answer:0:1} in
-    q|Q )
-	echo '▒▒   Installing Qtile, Kitty and Rofi..'
+    y|Y )
+	echo '▒▒   Installing Qtile, Picom, Kitty and Rofi..'
 	yay -S --noconfirm --needed qtile-git qtile-extras-git &> /dev/null
-	sudo pacman -S --noconfirm --needed kitty rofi &> /dev/null
-	echo '▒▒   Installing Thunar, Nitrogen and Dunst..'
-	sudo pacman -S --noconfirm --needed thunar thunar-volman xfce4-settings nitrogen dunst &> /dev/null
+	sudo pacman -S --noconfirm --needed picom kitty rofi &> /dev/null
 	rsync -r ~/Github/arch/home/config/kitty/ ~/.config/kitty &> /dev/null
+    rsync -r ~/Github/arch/home/config/picom/ ~/ &> /dev/null
 	rsync -r ~/Github/arch/home/config/qtile/ ~/.config/qtile &> /dev/null
 	rsync -r ~/Github/arch/home/config/rofi/ ~/.config/rofi &> /dev/null
 	chmod +x ~/.config/qtile/autostart.sh &> /dev/null
 	python -m py_compile ~/.config/qtile/config.py &> /dev/null
+	echo '▒▒   Installing Thunar, Nitrogen and Dunst..'
+	sudo pacman -S --noconfirm --needed thunar thunar-volman xfce4-settings nitrogen dunst &> /dev/null
 	rsync -r ~/Github/arch/Pictures/ ~/Pictures &> /dev/null
 	rsync -r ~/Github/arch/home/config/dunst/ ~/.config/dunst &> /dev/null
 	rsync -r ~/Github/arch/home/config/xfce4/ ~/.config/xfce4 &> /dev/null
 	echo '▒▒'
     ;;
-    g|G )
+    * )
+	echo '▒▒   skipped'
+	echo '▒▒'
+    ;;
+esac
+
+
+# ~~ install window manager; Gnome
+
+echo '▒▒   [Window Manager]'
+read -p "▒▒   Install Gnome? (y/N) " answer
+case ${answer:0:1} in
+    y|Y )
 	echo '▒▒   Installing Gnome..'
 	sudo pacman -S --noconfirm --needed gnome-shell gnome-shell-extensions gnome-menus gnome-control-center gnome-keyring gnome-tweaks &> /dev/null
 	sudo pacman -S --noconfirm --needed gnome-console gnome-logs gnome-system-monitor gnome-backgrounds gnome-text-editor &> /dev/null
@@ -175,32 +196,21 @@ case ${answer:0:1} in
 # 	sudo pacman -S --noconfirm --needed gnome-software flatpak &> /dev/null
 # 	sudo pacman -S --noconfirm --needed snapshot &> /dev/null
 	echo '▒▒   Gnome Tweaks and copying background images..'
- 	gsettings set org.gnome.desktop.wm.preferences resize-with-right-button true &> /dev/null
-   	gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close" &> /dev/null
-    	gsettings set org.gnome.mutter center-new-windows true &> /dev/null
-	gsettings set org.gnome.desktop.wm.preferences focus-mode sloppy &> /dev/null
-     	gsettings set org.gnome.desktop.wm.preferences auto-raise true &> /dev/null
 	gsettings set org.gnome.desktop.interface cursor-theme 'Qogir-dark-cursors' &> /dev/null
-        gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark' &> /dev/null
+    gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark' &> /dev/null
 	gsettings set org.gnome.desktop.interface document-font-name 'Comfortaa 11' &> /dev/null
 	gsettings set org.gnome.desktop.interface font-name 'Comfortaa 11' &> /dev/null
  	gsettings set org.gnome.desktop.peripherals.mouse accel-profile flat &> /dev/null
+    gsettings set org.gnome.desktop.wm.preferences resize-with-right-button true &> /dev/null
+   	gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close" &> /dev/null
+	gsettings set org.gnome.desktop.wm.preferences focus-mode sloppy &> /dev/null
+    gsettings set org.gnome.desktop.wm.preferences auto-raise true &> /dev/null
+    gsettings set org.gnome.mutter center-new-windows true &> /dev/null
 	dconf load /org/gnome/settings-daemon/plugins/media-keys/ < ~/Github/arch/dconf/kb_media &> /dev/null
 	dconf load /org/gnome/shell/keybindings/ < ~/Github/arch/dconf/kb_shell &> /dev/null
 	dconf load /org/gnome/desktop/wm/keybindings/ < ~/Github/arch/dconf/kb_wm &> /dev/null
  	rsync -r ~/Github/arch/home/.local/share/applications/ ~/.local/share/applications &> /dev/null
 	rsync -r ~/Github/arch/Pictures/ ~/Pictures &> /dev/null
-	echo '▒▒'
-    ;;
-esac
-
-# tablet support
-echo '▒▒   [Touchscreen]'
-read -p "▒▒   Install tablet support? (y/N) " answer
-case ${answer:0:1} in
-    y|Y )
-	echo '▒▒   Installing..'
- 	sudo pacman -S --noconfirm --needed xf86-input-wacom iio-sensor-proxy &> /dev/null
 	echo '▒▒'
     ;;
     * )
@@ -209,6 +219,41 @@ case ${answer:0:1} in
     ;;
 esac
 
+
+# ~~ install keyd
+
+echo '▒▒   [Keyboard]'
+read -p "▒▒   Install keyd? (y/N) " answer
+case ${answer:0:1} in
+    y|Y )
+	echo '▒▒   Installing..'
+    sudo pacman -S --noconfirm --needed keyd &> /dev/null
+    sudo rsync -r ~/Github/arch/etc/keyd/ /etc/keyd &> /dev/null
+    systemctl enable keyd &> /dev/null
+    systemctl start keyd &> /dev/null
+    ;;
+    * )
+	echo '▒▒   skipped'
+    ;;
+esac
+
+
+# ~~ install tablet support
+
+echo '▒▒   [Touchscreen]'
+read -p "▒▒   Install tablet support? (y/N) " answer
+case ${answer:0:1} in
+    y|Y )
+	echo '▒▒   Installing..'
+ 	sudo pacman -S --noconfirm --needed xf86-input-wacom iio-sensor-proxy &> /dev/null
+    ;;
+    * )
+	echo '▒▒   skipped'
+    ;;
+esac
+
+
+echo '▒▒'
 echo '▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒'
 echo '▒▒  _____ _                          ▒▒'
 echo '▒▒ |_   _| |__   ___ _ __ ___   ___  ▒▒'
@@ -219,19 +264,25 @@ echo '▒▒                                   ▒▒'
 echo '▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒'
 echo '▒▒'
 
-# install cursor
+
+# ~~ install cursor
+
 echo '▒▒   [Cursor]'
 echo '▒▒   Installing Qogir Cursor..'
 yay -S --noconfirm --needed qogir-cursor-theme-git &> /dev/null
 echo '▒▒'
 
-# install icons
+
+# ~~ install icons
+
 echo '▒▒   [Icons]'
 echo '▒▒   Installing Papirus Icons..'
 sudo pacman -S --noconfirm --needed papirus-icon-theme &> /dev/null
 echo '▒▒'
 
-# install theme
+
+# ~~ install theme
+
 echo '▒▒   [Theme]'
 echo '▒▒   Installing Whitesur, Breeze and Adwaita..'
 sudo pacman -S --noconfirm --needed breeze breeze-gtk gnome-themes-extra qt5ct &> /dev/null
@@ -246,15 +297,20 @@ rsync -r ~/Github/arch/home/config/qt5ct/ ~/.config/qt5ct &> /dev/null
 sudo rsync ~/Github/arch/etc/environment /etc &> /dev/null
 echo '▒▒'
 
-# install font
+
+# ~~ install font
+
 echo '▒▒   [Font]'
 echo '▒▒   Installing font..'
 sudo pacman -S --noconfirm --needed noto-fonts noto-fonts-cjk noto-fonts-emoji &> /dev/null
 yay -S --noconfirm --needed ttf-comfortaa &> /dev/null
 sudo pacman -S nerd-fonts
 echo '▒▒'
+clear
 
-# gnome theme tweaks againg
+
+# ~~ gnome theme tweaks again
+
 gsettings set org.gnome.desktop.wm.preferences resize-with-right-button true &> /dev/null
 gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close" &> /dev/null
 gsettings set org.gnome.mutter center-new-windows true &> /dev/null
@@ -266,6 +322,7 @@ gsettings set org.gnome.desktop.interface document-font-name 'Comfortaa 11' &> /
 gsettings set org.gnome.desktop.interface font-name 'Comfortaa 11' &> /dev/null
 gsettings set org.gnome.desktop.peripherals.mouse accel-profile flat &> /dev/null
 
+
 echo '▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒'
 echo '▒▒  ____         __ _                            ▒▒'
 echo '▒▒ / ___|  ___  / _| |___      ____ _ _ __ ___   ▒▒'
@@ -276,7 +333,9 @@ echo '▒▒                                               ▒▒'
 echo '▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒'
 echo '▒▒'
 
-# install steam, gamemode
+
+# ~~ install steam
+
 echo '▒▒   [Steam]'
 read -p "▒▒   Install Steam? (y/N) " answer
 case ${answer:0:1} in
@@ -292,7 +351,9 @@ case ${answer:0:1} in
     ;;
 esac
 
-# install discord, teamspeak
+
+# ~~ install discord, teamspeak
+
 echo '▒▒   [Chat]'
 read -p "▒▒   Install Discord, Teamspeak? (y/N) " answer
 case ${answer:0:1} in
@@ -309,7 +370,9 @@ case ${answer:0:1} in
     ;;
 esac
 
-# install thunderbird
+
+# ~~ install thunderbird
+
 echo '▒▒   [E-Mail]'
 read -p "▒▒   Install Thunderbird? (y/N) " answer
 case ${answer:0:1} in
@@ -325,7 +388,9 @@ case ${answer:0:1} in
     ;;
 esac
 
-# install gimp
+
+# ~~ install gimp
+
 echo '▒▒   [Photo Editing]'
 read -p "▒▒   Install Gimp? (y/N) " answer
 case ${answer:0:1} in
@@ -341,7 +406,45 @@ case ${answer:0:1} in
     ;;
 esac
 
-# install mullvad vpn
+
+# ~~ install figma
+
+echo '▒▒   [Webdevelopment]'
+read -p "▒▒   Install Figma? (y/N) " answer
+case ${answer:0:1} in
+    y|Y )
+	echo '▒▒   Installing..'
+	sudo pacman -S --noconfirm --needed figma-linux &> /dev/null
+	echo '▒▒   done'
+	echo '▒▒'
+    ;;
+    * )
+	echo '▒▒   skipped'
+	echo '▒▒'
+    ;;
+esac
+
+
+# ~~ install vscode
+
+echo '▒▒   [Webdevelopment]'
+read -p "▒▒   Install VS Code? (y/N) " answer
+case ${answer:0:1} in
+    y|Y )
+	echo '▒▒   Installing..'
+	sudo pacman -S --noconfirm --needed code &> /dev/null
+	echo '▒▒   done'
+	echo '▒▒'
+    ;;
+    * )
+	echo '▒▒   skipped'
+	echo '▒▒'
+    ;;
+esac
+
+
+# ~~ install mullvad vpn
+
 echo '▒▒   [VPN]'
 read -p "▒▒   Install Mullvad VPN? (y/N) " answer
 case ${answer:0:1} in
