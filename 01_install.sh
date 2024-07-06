@@ -167,7 +167,7 @@ case ${answer:0:1} in
 	python -m py_compile ~/.config/qtile/config.py &> /dev/null
 	echo '▒▒   Installing Thunar, Nitrogen and Dunst..'
 	sudo pacman -S --noconfirm --needed thunar thunar-volman xfce4-settings nitrogen dunst &> /dev/null
-	rsync -r ~/Github/arch/Pictures/ ~/Pictures &> /dev/null
+	rsync -r ~/Github/arch/home/Pictures/ ~/Pictures &> /dev/null
 	rsync -r ~/Github/arch/home/config/dunst/ ~/.config/dunst &> /dev/null
 	rsync -r ~/Github/arch/home/config/xfce4/ ~/.config/xfce4 &> /dev/null
 	echo '▒▒'
@@ -197,7 +197,7 @@ case ${answer:0:1} in
 # 	sudo pacman -S --noconfirm --needed snapshot &> /dev/null
 	dconf load / < ~/Github/arch/dconf/all.conf &> /dev/null
  	rsync -r ~/Github/arch/home/.local/share/applications/ ~/.local/share/applications &> /dev/null
-	rsync -r ~/Github/arch/Pictures/ ~/Pictures &> /dev/null
+	rsync -r ~/Github/arch/home/Pictures/ ~/Pictures &> /dev/null
 	echo '▒▒'
     ;;
     * )
