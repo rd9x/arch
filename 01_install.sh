@@ -275,6 +275,7 @@ echo '▒▒   Installing Whitesur, Breeze and Adwaita..'
 sudo pacman -S --noconfirm --needed breeze breeze-gtk gnome-themes-extra qt5ct &> /dev/null
 cd ~/Github/WhiteSur-gtk-theme &> /dev/null
 ./install.sh &> /dev/null
+./install.sh -N glassy &> /dev/null
 ./tweaks.sh -f alt &> /dev/null
 rsync ~/Github/arch/home/.gtkrc-2.0.mine ~/ &> /dev/null
 rsync ~/Github/arch/home/.gtkrc-2.0 ~/ &> /dev/null
