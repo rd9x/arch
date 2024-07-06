@@ -3,6 +3,7 @@ neofetch
 eval "$(starship init bash)"
 
 # Aliases
+alias ..='cd ..'
 alias ls='ls --color=auto'       # default autocoloring
 alias lsa='ls -A'                # show hidden dotfiles
 alias ll='ls -lav --ignore=..'   # show long listing of all except ".."
