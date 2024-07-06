@@ -1,4 +1,8 @@
 [/]
+decrease-text-size=@as []
 home=['<Super>e']
+increase-text-size=@as []
+logout=['<Control><Super>q']
+screenreader=@as []
 search=@as []
 www=['<Super>b']
