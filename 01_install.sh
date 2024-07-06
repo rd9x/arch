@@ -190,7 +190,7 @@ case ${answer:0:1} in
 	sudo pacman -S --noconfirm --needed gnome-console gnome-logs gnome-system-monitor gnome-backgrounds gnome-text-editor &> /dev/null
 	sudo pacman -S --noconfirm --needed networkmanager xdg-user-dirs-gtk xdg-desktop-portal-gnome &> /dev/null
 	sudo pacman -S --noconfirm --needed gnome-calendar gnome-contacts gnome-music loupe  &> /dev/null
-	sudo pacman -S --noconfirm --needed nautilus sushi epiphany secrets seahorse  &> /dev/null
+	sudo pacman -S --noconfirm --needed nautilus sushi secrets seahorse  &> /dev/null
 	yay -S --noconfirm --needed gnome-extensions-cli extension-manager &> /dev/null
 # 	yay -S --noconfirm --needed pamac-aur &> /dev/null
 # 	sudo pacman -S --noconfirm --needed gnome-software flatpak &> /dev/null
@@ -275,6 +275,7 @@ echo '▒▒   Installing Whitesur, Breeze and Adwaita..'
 sudo pacman -S --noconfirm --needed breeze breeze-gtk gnome-themes-extra qt5ct &> /dev/null
 cd ~/Github/WhiteSur-gtk-theme &> /dev/null
 ./install.sh &> /dev/null
+./tweaks.sh -f alt &> /dev/null
 rsync ~/Github/arch/home/.gtkrc-2.0.mine ~/ &> /dev/null
 rsync ~/Github/arch/home/.gtkrc-2.0 ~/ &> /dev/null
 rsync -r ~/Github/arch/home/config/fontconfig/ ~/.config/fontconfig &> /dev/null
