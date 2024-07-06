@@ -77,7 +77,7 @@ echo '▒▒'
 # install shell, editor, neofetch
 echo '▒▒   [Shell]'
 echo '▒▒   Installing Starship and Neofetch..'
-sudo pacman -S --noconfirm --needed starship nano neofetch tldr ncdu ntfs-3g &> /dev/null
+sudo pacman -S --noconfirm --needed starship nano neofetch tldr ncdu ntfs-3g figlet &> /dev/null
 echo '▒▒   Copying config files..'
 rsync -r ~/Github/arch/home/config/htop/ ~/.config/htop &> /dev/null
 rsync -r ~/Github/arch/home/config/neofetch/ ~/.config/neofetch &> /dev/null
