@@ -8,7 +8,6 @@ echo '▒▒ \___ \| | | / __| __/ _ \ `_ ` _ \  ▒▒'
 echo '▒▒  ___) | |_| \__ \ | | __/ | | | | | ▒▒'
 echo '▒▒ |____/ \__, |___/\__\___|_| |_| |_| ▒▒'
 echo '▒▒        |___/                        ▒▒'
-echo '▒▒                                     ▒▒'
 echo '▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒'
 echo '▒▒'
 
@@ -22,7 +21,6 @@ cd ~/Github &> /dev/null
 git clone https://aur.archlinux.org/yay.git &> /dev/null
 git clone https://github.com/rd9x/aerial-sddm-theme &> /dev/null
 git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git --depth=1 &> /dev/null
-echo '▒▒   done'
 echo '▒▒'
 
 # install yay
@@ -30,10 +28,7 @@ echo '▒▒   Installing yay..'
 cd yay &> /dev/null
 makepkg -si
 yay -Y --gendb
-echo '▒▒   done'
-echo '▒▒'
-
-
+clear
 echo '▒▒'
 echo '▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒'
 echo '▒▒  _____           _       ▒▒'
@@ -45,18 +40,16 @@ echo '▒▒                          ▒▒'
 echo '▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒'
 echo '▒▒'
 
-# install backup
+# backup
 echo '▒▒   [Backup]'
 echo '▒▒   Installing Timeshift..'
 sudo pacman -S --noconfirm --needed timeshift &> /dev/null
-echo '▒▒   done'
 echo '▒▒'
 
-# install multimedia
+# multimedia
 echo '▒▒   [Multimedia]'
-echo '▒▒   Installing VLC and multimedia support..'
+echo '▒▒   Installing multimedia support..'
 sudo pacman -S --noconfirm --needed feh maim ffmpeg vlc p7zip unrar gvfs gpick &> /dev/null
-echo '▒▒   done'
 echo '▒▒'
 
 # install keyd
@@ -66,21 +59,18 @@ sudo pacman -S --noconfirm --needed keyd &> /dev/null
 sudo rsync -r ~/Github/arch/etc/keyd/ /etc/keyd &> /dev/null
 systemctl enable keyd &> /dev/null
 systemctl start keyd &> /dev/null
-echo '▒▒   done'
 echo '▒▒'
 
-# install shell, editor, neofetch
+# shell, editor, neofetch
 echo '▒▒   [Shell]'
 echo '▒▒   Installing Starship and Neofetch..'
-sudo pacman -S --noconfirm --needed starship nano neofetch tldr ncdu ntfs-3g figlet &> /dev/null
-echo '▒▒   Copying config files..'
+sudo pacman -S --noconfirm --needed starship nano neofetch tldr ncdu ntfs-3g figlet ranger &> /dev/null
 rsync -r ~/Github/arch/home/config/htop/ ~/.config/htop &> /dev/null
 rsync -r ~/Github/arch/home/config/neofetch/ ~/.config/neofetch &> /dev/null
 rsync ~/Github/arch/home/config/starship.toml ~/.config &> /dev/null
 rsync ~/Github/arch/home/.bashrc ~/ &> /dev/null
 rsync ~/Github/arch/home/.bash_profile ~/ &> /dev/null
 rsync ~/Github/arch/home/.nanorc ~/ &> /dev/null
-echo '▒▒   done'
 echo '▒▒'
 echo '▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒'
 echo '▒▒     _             _ _                         _   ____  _           _              ▒▒'
@@ -89,7 +79,6 @@ echo '▒▒   / _ \| | | |/ _` | |/ _ \   / _` |  _ \ / _` | | | | | / __| `_ \
 echo '▒▒  / ___ \ |_| | (_| | | (_) | | (_| | | | | (_| | | |_| | \__ \ |_) | | (_| | |_| | ▒▒'
 echo '▒▒ /_/   \_\__,_|\__,_|_|\___/   \__,_|_| |_|\__,_| |____/|_|___/ .__/|_|\__,_|\__, | ▒▒'
 echo '▒▒                                                              |_|            |___/  ▒▒'
-echo '▒▒                                                                                    ▒▒'
 echo '▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒'
 echo '▒▒'
 
@@ -97,7 +86,6 @@ echo '▒▒'
 echo '▒▒   [Audio]'
 echo '▒▒   Installing Pipewire and Alsa Utilities..'
 sudo pacman -S --noconfirm --needed pipewire pipewire-pulse wireplumber alsa-utils pavucontrol &> /dev/null
-echo '▒▒   done'
 echo '▒▒'
 
 # install X11
@@ -106,18 +94,14 @@ echo '▒▒   Installing X11..'
 sudo pacman -S --noconfirm --needed xorg xorg-xinit xorg-xinput &> /dev/null
 echo '▒▒   Installing Wayland support..'
 sudo pacman -S --noconfirm --needed xorg-wayland qt5-wayland qt6-wayland &> /dev/null
-echo '▒▒   Copying config files..'
 rsync ~/Github/arch/home/.xinitrc ~/ &> /dev/null
-echo '▒▒   done'
 echo '▒▒'
 
 # install picom
 echo '▒▒   [Compositor]'
 echo '▒▒   Installing Picom..'
 sudo pacman -S --noconfirm --needed picom &> /dev/null
-echo '▒▒   Copying config files..'
 rsync ~/Github/arch/home/config/picom/ ~/ &> /dev/null
-echo '▒▒   done'
 echo '▒▒'
 
 # install GPU drivers
@@ -128,14 +112,12 @@ case ${answer:0:1} in
 	echo '▒▒   Installing NVIDIA drivers..'
 	sudo pacman -S --noconfirm --needed nvidia nvidia-settings nvidia-utils lib32-nvidia-utils &> /dev/null
 	sudo pacman -S --noconfirm --needed vulkan-icd-loader lib32-vulkan-icd-loader &> /dev/null
-	echo '▒▒   done'
 	echo '▒▒'
     ;;
     * )
 	echo '▒▒   Installing AMD/Intel drivers..'
 	sudo pacman -S --noconfirm --needed mesa mesa-utils &> /dev/null
 	sudo pacman -S --noconfirm --needed vulkan-icd-loader lib32-vulkan-icd-loader &> /dev/null
-	echo '▒▒   done'
 	echo '▒▒'
     ;;
 esac
@@ -148,20 +130,15 @@ case ${answer:0:1} in
 	echo '▒▒   Installing SDDM..'
 	sudo pacman -S --noconfirm --needed sddm phonon-qt5-gstreamer &> /dev/null
 	sudo pacman -S --noconfirm --needed gst-libav gst-plugins-good qt5-quickcontrols qt5-graphicaleffects qt5-multimedia &> /dev/null
-	echo '▒▒   Copying config files..'
  	sudo rsync -r ~/Github/aerial-sddm-theme/ /usr/share/sddm/themes/rd9x &> /dev/null
 	sudo rsync -r ~/Github/arch/etc/sddm.conf.d/ /etc/sddm.conf.d &> /dev/null
-	echo '▒▒   Enabling services..'
  	sudo systemctl enable sddm.service &> /dev/null
-	echo '▒▒   done'
 	echo '▒▒'
     ;;
     g|G )
 	echo '▒▒   Installing GDM..'
 	sudo pacman -S --noconfirm --needed gdm &> /dev/null
-	echo '▒▒   Enabling services..'
  	sudo systemctl enable gdm.service &> /dev/null
-	echo '▒▒   done'
 	echo '▒▒'
     ;;
 esac
@@ -176,7 +153,6 @@ case ${answer:0:1} in
 	sudo pacman -S --noconfirm --needed kitty rofi &> /dev/null
 	echo '▒▒   Installing Thunar, Nitrogen and Dunst..'
 	sudo pacman -S --noconfirm --needed thunar thunar-volman xfce4-settings nitrogen dunst &> /dev/null
-	echo '▒▒   Copying config files..'
 	rsync -r ~/Github/arch/home/config/kitty/ ~/.config/kitty &> /dev/null
 	rsync -r ~/Github/arch/home/config/qtile/ ~/.config/qtile &> /dev/null
 	rsync -r ~/Github/arch/home/config/rofi/ ~/.config/rofi &> /dev/null
@@ -185,7 +161,6 @@ case ${answer:0:1} in
 	rsync -r ~/Github/arch/Pictures/ ~/Pictures &> /dev/null
 	rsync -r ~/Github/arch/home/config/dunst/ ~/.config/dunst &> /dev/null
 	rsync -r ~/Github/arch/home/config/xfce4/ ~/.config/xfce4 &> /dev/null
-	echo '▒▒   done'
 	echo '▒▒'
     ;;
     g|G )
@@ -215,7 +190,6 @@ case ${answer:0:1} in
 	dconf load /org/gnome/desktop/wm/keybindings/ < ~/Github/arch/dconf/kb_wm &> /dev/null
  	rsync -r ~/Github/arch/home/.local/share/applications/ ~/.local/share/applications &> /dev/null
 	rsync -r ~/Github/arch/Pictures/ ~/Pictures &> /dev/null
-	echo '▒▒   done'
 	echo '▒▒'
     ;;
 esac
@@ -227,7 +201,6 @@ case ${answer:0:1} in
     y|Y )
 	echo '▒▒   Installing..'
  	sudo pacman -S --noconfirm --needed xf86-input-wacom iio-sensor-proxy &> /dev/null
-	echo '▒▒   done'
 	echo '▒▒'
     ;;
     * )
@@ -250,14 +223,12 @@ echo '▒▒'
 echo '▒▒   [Cursor]'
 echo '▒▒   Installing Qogir Cursor..'
 yay -S --noconfirm --needed qogir-cursor-theme-git &> /dev/null
-echo '▒▒   done'
 echo '▒▒'
 
 # install icons
 echo '▒▒   [Icons]'
 echo '▒▒   Installing Papirus Icons..'
 sudo pacman -S --noconfirm --needed papirus-icon-theme &> /dev/null
-echo '▒▒   done'
 echo '▒▒'
 
 # install theme
@@ -266,7 +237,6 @@ echo '▒▒   Installing Whitesur, Breeze and Adwaita..'
 sudo pacman -S --noconfirm --needed breeze breeze-gtk gnome-themes-extra qt5ct &> /dev/null
 cd ~/Github/WhiteSur-gtk-theme &> /dev/null
 ./install.sh &> /dev/null
-echo '▒▒   Copying config files..'
 rsync ~/Github/arch/home/.gtkrc-2.0.mine ~/ &> /dev/null
 rsync ~/Github/arch/home/.gtkrc-2.0 ~/ &> /dev/null
 rsync -r ~/Github/arch/home/config/fontconfig/ ~/.config/fontconfig &> /dev/null
@@ -274,7 +244,6 @@ rsync -r ~/Github/arch/home/config/gtk-3.0/ ~/.config/gtk-3.0 &> /dev/null
 rsync -r ~/Github/arch/home/config/gtk-4.0/ ~/.config/gtk-4.0 &> /dev/null
 rsync -r ~/Github/arch/home/config/qt5ct/ ~/.config/qt5ct &> /dev/null
 sudo rsync ~/Github/arch/etc/environment /etc &> /dev/null
-echo '▒▒   done'
 echo '▒▒'
 
 # install font
@@ -283,7 +252,6 @@ echo '▒▒   Installing font..'
 sudo pacman -S --noconfirm --needed noto-fonts noto-fonts-cjk noto-fonts-emoji &> /dev/null
 yay -S --noconfirm --needed ttf-comfortaa &> /dev/null
 sudo pacman -S nerd-fonts
-echo '▒▒   done'
 echo '▒▒'
 
 # gnome theme tweaks againg
