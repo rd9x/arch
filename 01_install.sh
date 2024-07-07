@@ -160,7 +160,7 @@ case ${answer:0:1} in
 	yay -S --noconfirm --needed qtile-git qtile-extras-git &> /dev/null
 	sudo pacman -S --noconfirm --needed picom kitty rofi &> /dev/null
 	rsync -r ~/Github/arch/home/config/kitty/ ~/.config/kitty &> /dev/null
-    rsync -r ~/Github/arch/home/config/picom/ ~/ &> /dev/null
+    	rsync -r ~/Github/arch/home/config/picom/ ~/.config/picom &> /dev/null
 	rsync -r ~/Github/arch/home/config/qtile/ ~/.config/qtile &> /dev/null
 	rsync -r ~/Github/arch/home/config/rofi/ ~/.config/rofi &> /dev/null
 	chmod +x ~/.config/qtile/autostart.sh &> /dev/null
