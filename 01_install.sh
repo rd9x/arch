@@ -214,13 +214,15 @@ read -p "▒▒   Install keyd? (y/N) " answer
 case ${answer:0:1} in
     y|Y )
 	echo '▒▒   Installing..'
-    sudo pacman -S --noconfirm --needed keyd &> /dev/null
-    sudo rsync -r ~/Github/arch/etc/keyd/ /etc/keyd &> /dev/null
-    systemctl enable keyd &> /dev/null
-    systemctl start keyd &> /dev/null
+	sudo pacman -S --noconfirm --needed keyd &> /dev/null
+	sudo rsync -r ~/Github/arch/etc/keyd/ /etc/keyd &> /dev/null
+	systemctl enable keyd &> /dev/null
+	systemctl start keyd &> /dev/null
+	echo '▒▒'
     ;;
     * )
 	echo '▒▒   skipped'
+	echo '▒▒'
     ;;
 esac
 
