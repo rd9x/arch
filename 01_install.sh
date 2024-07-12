@@ -59,7 +59,7 @@ echo '▒▒'
 
 echo '▒▒   [Multimedia]'
 echo '▒▒   Installing multimedia support..'
-sudo pacman -S --noconfirm --needed feh maim ffmpeg vlc p7zip unrar gvfs gpick &> /dev/null
+sudo pacman -S --noconfirm --needed feh maim ffmpeg vlc p7zip unrar gvfs gpick kid3 atomicparsley &> /dev/null
 echo '▒▒'
 
 
@@ -67,7 +67,7 @@ echo '▒▒'
 
 echo '▒▒   [Shell]'
 echo '▒▒   Installing Starship and Neofetch..'
-sudo pacman -S --noconfirm --needed starship nano neofetch tldr ncdu ntfs-3g figlet ranger &> /dev/null
+sudo pacman -S --noconfirm --needed starship nano neofetch tldr ncdu ntfs-3g figlet ranger python-pip python-mutagen &> /dev/null
 rsync -r ~/Github/arch/home/config/htop/ ~/.config/htop &> /dev/null
 rsync -r ~/Github/arch/home/config/neofetch/ ~/.config/neofetch &> /dev/null
 rsync ~/Github/arch/home/config/starship.toml ~/.config &> /dev/null
@@ -158,7 +158,7 @@ case ${answer:0:1} in
     y|Y )
 	echo '▒▒   Installing Qtile, Picom, Kitty and Rofi..'
 	yay -S --noconfirm --needed qtile-git qtile-extras-git &> /dev/null
-	sudo pacman -S --noconfirm --needed picom kitty rofi &> /dev/null
+	sudo pacman -S --noconfirm --needed python-psutil picom kitty rofi &> /dev/null
 	rsync -r ~/Github/arch/home/config/kitty/ ~/.config/kitty &> /dev/null
     	rsync -r ~/Github/arch/home/config/picom/ ~/.config/picom &> /dev/null
 	rsync -r ~/Github/arch/home/config/qtile/ ~/.config/qtile &> /dev/null
