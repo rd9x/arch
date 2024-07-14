@@ -279,6 +279,7 @@ cd ~/Github/WhiteSur-gtk-theme &> /dev/null
 ./install.sh &> /dev/null
 ./install.sh -N glassy &> /dev/null
 ./tweaks.sh -f alt &> /dev/null
+./tweaks.sh -g -c Dark -b ~/Pictures/fluid.jpg &> /dev/null
 rsync ~/Github/arch/home/.gtkrc-2.0.mine ~/ &> /dev/null
 rsync ~/Github/arch/home/.gtkrc-2.0 ~/ &> /dev/null
 rsync -r ~/Github/arch/home/config/fontconfig/ ~/.config/fontconfig &> /dev/null
