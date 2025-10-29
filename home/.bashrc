@@ -28,3 +28,4 @@ timer() {
   (sleep $N && zenity --info --title="Time's Up" --text="${*:-BING}") &
   echo "timer set for $N"
 }
+export PATH=/home/rd9x/.local/bin:$VCPKG_ROOT:$PATH:/usr/local/sbin:/usr/local/bin:/usr/bin:/var/lib/flatpak/exports/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
