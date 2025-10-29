@@ -34,7 +34,7 @@ keys = [
 
     # App hotkeys
 
-    Key([mod], "e", lazy.spawn("thunar"), desc="Launch thunar"),
+    Key([mod], "e", lazy.spawn("nautilus"), desc="Launch nautilus"),
     Key([mod], "t", lazy.spawn("teamspeak"), desc="Launch teamspeak"),
     Key([mod], "s", lazy.spawn("steam"), desc="Launch steam"),
     Key([mod], "d", lazy.spawn("discord"), desc="Launch discord"),
@@ -73,7 +73,7 @@ keys = [
 groups = [
     Group("WWW"),
     Group("GMS"),
-    Group("CHT", spawn=["discord", "teamspeak"]),
+    Group("CHT", spawn=["teamspeak3"]),
     Group("PWD", spawn="qtpass"),
     Group("SYS"),
     Group("6"),
@@ -125,13 +125,13 @@ extension_defaults = widget_defaults.copy()
 
 decoration_group= {
     "decorations": [
-        RectDecoration(colour="#24273A55", radius=10, filled=True, group=True)
+        RectDecoration(colour="#11111A99", radius=0, filled=True, group=True)
     ],
     "padding": 8,
 }
 decoration_group2= {
     "decorations": [
-        RectDecoration(colour="#24273A55", radius=10, filled=True, group=True, extrawidth=12)
+        RectDecoration(colour="#11111A99", radius=0, filled=True, group=True, extrawidth=12)
     ],
     "padding": 8,
 }
@@ -165,6 +165,7 @@ screens = [
 			highlight_method='block',
 			title_width_method='uniform',
 			padding=6,
+			radius=0
 		),
 		widget.Spacer(
 			length=100
@@ -233,9 +234,9 @@ screens = [
 		),
             ],
             36,
-	  background="#00000000",
-	  margin=[12, 12, 6, 12],
-	  border_radius=10,
+	 background="#00000000",
+	 margin=[12, 12, 6, 12],
+	 border_radius=0,
         ),
         # You can uncomment this variable if you see that on X11 floating resize/moving is laggy
         # x11_drag_polling_rate = 60,
