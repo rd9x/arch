@@ -17,7 +17,7 @@ echo '▒▒'
 echo '▒▒   Updating system..'
 sudo pacman -Syu &> ~/install.log
 echo '▒▒   Installing linux headers..'
-sudo pacman -S --noconfirm --needed base-devel linux-headers paccache rsync &>> ~/install.log
+sudo pacman -S --noconfirm --needed base-devel linux-headers pacman-contrib rsync &>> ~/install.log
 echo '▒▒   Cloning github repos..'
 cd ~/Github &>> ~/install.log
 git clone https://aur.archlinux.org/yay.git &>> ~/install.log
