@@ -123,7 +123,8 @@ rsync -r ~/Github/arch/home/config/rofi/ ~/.config/rofi &>> ~/install.log
 chmod +x ~/.config/qtile/autostart.sh &>> ~/install.log
 python -m py_compile ~/.config/qtile/config.py &>> ~/install.log
 echo '▒▒   Installing Nautilus, Nitrogen, Networkmanager and Dunst..'
-sudo pacman -S --noconfirm --needed nautilus sushi seahorse xfce4-settings nitrogen networkmanager dunst xdg-user-dirs-gtk xdg-desktop-portal xdg-desktop-portal-gtk &>> ~/install.log
+sudo pacman -S --noconfirm --needed nautilus sushi seahorse xfce4-settings networkmanager dunst xdg-user-dirs-gtk xdg-desktop-portal xdg-desktop-portal-gtk &>> ~/install.log
+yay -S --noconfirm --needed nitrogen &>> ~/install.log
 rsync -r ~/Github/arch/home/Pictures/ ~/Pictures &>> ~/install.log
 rsync -r ~/Github/arch/home/config/dunst/ ~/.config/dunst &>> ~/install.log
 rsync -r ~/Github/arch/home/config/xfce4/ ~/.config/xfce4 &>> ~/install.log
