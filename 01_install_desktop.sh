@@ -48,7 +48,7 @@ echo '▒▒'
 echo '▒▒   [Shell]'
 echo '▒▒   Installing Starship, Neofetch, Ranger, ncdu, nano, tldr, ntfs-3g, figlet..'
 sudo pacman -S --noconfirm --needed starship ranger ncdu nano tldr ntfs-3g figlet &>> ~/install.log
-sudo yay -S --noconfirm --needed neofetch &>> ~/install.log
+yay -S --noconfirm --needed neofetch &>> ~/install.log
 echo '▒▒   Copying config files..'
 # rsync -r ~/Github/arch/home/config/htop/ ~/.config/htop &>> ~/install.log
 rsync -r ~/Github/arch/home/config/neofetch/ ~/.config/neofetch &>> ~/install.log
