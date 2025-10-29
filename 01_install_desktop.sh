@@ -102,7 +102,7 @@ echo '▒▒'
 
 echo '▒▒   [Login Manager]'
 echo '▒▒   Installing SDDM..'
-sudo pacman -S --noconfirm --needed sddm phonon-qt6-vlc &>> ~/install.log
+sudo pacman -S --noconfirm --needed sddm phonon-qt6 phonon-qt6-vlc &>> ~/install.log
 sudo pacman -S --noconfirm --needed gst-libav gst-plugins-good qt5-quickcontrols qt5-graphicaleffects qt5-multimedia &>> ~/install.log
 sudo rsync -r ~/Github/aerial-sddm-theme/ /usr/share/sddm/themes/rd9x &>> ~/install.log
 sudo rsync -r ~/Github/arch/etc/sddm.conf.d/ /etc/sddm.conf.d &>> ~/install.log
