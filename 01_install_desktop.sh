@@ -101,8 +101,8 @@ echo '▒▒'
 
 echo '▒▒   [Login Manager]'
 echo '▒▒   Installing SDDM..'
-sudo pacman -S --noconfirm --needed sddm phonon-qt5-gstreamer &> /dev/null
-sudo pacman -S --noconfirm --needed gst-libav gst-plugins-good qt5-quickcontrols qt5-graphicaleffects qt5-multimedia &> /dev/null
+sudo pacman -S --noconfirm sddm phonon-qt5-vlc &> /dev/null
+sudo pacman -S --noconfirm gst-libav gst-plugins-good qt5-quickcontrols qt5-graphicaleffects qt5-multimedia &> /dev/null
 sudo rsync -r ~/Github/aerial-sddm-theme/ /usr/share/sddm/themes/rd9x &> /dev/null
 sudo rsync -r ~/Github/arch/etc/sddm.conf.d/ /etc/sddm.conf.d &> /dev/null
 sudo systemctl enable sddm.service &> /dev/null
