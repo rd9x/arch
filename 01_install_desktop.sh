@@ -15,21 +15,21 @@ echo '▒▒'
 # ~~ update system, install linux headers and clone github repos
 
 echo '▒▒   Updating system..'
-sudo pacman -Syu &> /dev/null
+sudo pacman -Syu &> ~/install.log
 echo '▒▒   Installing linux headers..'
-sudo pacman -S --noconfirm --needed base-devel linux-headers paccache &> /dev/null
+sudo pacman -S --noconfirm --needed base-devel linux-headers paccache &> ~/install.log
 echo '▒▒   Cloning github repos..'
-cd ~/Github &> /dev/null
-git clone https://aur.archlinux.org/yay.git &> /dev/null
-git clone https://github.com/rd9x/aerial-sddm-theme &> /dev/null
-git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git --depth=1 &> /dev/null
+cd ~/Github &> ~/install.log
+git clone https://aur.archlinux.org/yay.git &> ~/install.log
+git clone https://github.com/rd9x/aerial-sddm-theme &> ~/install.log
+git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git --depth=1 &> ~/install.log
 echo '▒▒'
 
 
 # ~~ install yay
 
 echo '▒▒   Installing yay..'
-cd yay &> /dev/null
+cd yay &> ~/install.log
 makepkg -si
 yay -Y --gendb
 clear
@@ -39,7 +39,7 @@ clear
 
 echo '▒▒   [Multimedia]'
 echo '▒▒   Installing multimedia support..'
-sudo pacman -S --noconfirm --needed feh maim ffmpeg p7zip unrar gpick gvfs vlc &> /dev/null
+sudo pacman -S --noconfirm --needed feh maim ffmpeg p7zip unrar gpick gvfs vlc &> ~/install.log
 echo '▒▒'
 
 
@@ -47,14 +47,14 @@ echo '▒▒'
 
 echo '▒▒   [Shell]'
 echo '▒▒   Installing Starship, Neofetch, Ranger, ncdu, nano, tldr, ntfs-3g, figlet..'
-sudo pacman -S --noconfirm --needed starship neofetch ranger ncdu nano tldr ntfs-3g figlet &> /dev/null
+sudo pacman -S --noconfirm --needed starship neofetch ranger ncdu nano tldr ntfs-3g figlet &> ~/install.log
 echo '▒▒   Copying config files..'
-# rsync -r ~/Github/arch/home/config/htop/ ~/.config/htop &> /dev/null
-rsync -r ~/Github/arch/home/config/neofetch/ ~/.config/neofetch &> /dev/null
-rsync ~/Github/arch/home/config/starship.toml ~/.config &> /dev/null
-rsync ~/Github/arch/home/.bashrc ~/ &> /dev/null
-rsync ~/Github/arch/home/.bash_profile ~/ &> /dev/null
-rsync ~/Github/arch/home/.nanorc ~/ &> /dev/null
+# rsync -r ~/Github/arch/home/config/htop/ ~/.config/htop &> ~/install.log
+rsync -r ~/Github/arch/home/config/neofetch/ ~/.config/neofetch &> ~/install.log
+rsync ~/Github/arch/home/config/starship.toml ~/.config &> ~/install.log
+rsync ~/Github/arch/home/.bashrc ~/ &> ~/install.log
+rsync ~/Github/arch/home/.bash_profile ~/ &> ~/install.log
+rsync ~/Github/arch/home/.nanorc ~/ &> ~/install.log
 
 
 echo '▒▒'
@@ -73,7 +73,7 @@ echo '▒▒'
 
 echo '▒▒   [Audio]'
 echo '▒▒   Installing Pipewire and Alsa Utilities..'
-sudo pacman -S --noconfirm --needed pipewire pipewire-pulse wireplumber alsa-utils pavucontrol &> /dev/null
+sudo pacman -S --noconfirm --needed pipewire pipewire-pulse wireplumber alsa-utils pavucontrol &> ~/install.log
 echo '▒▒'
 
 
@@ -81,10 +81,10 @@ echo '▒▒'
 
 echo '▒▒   [Display Server]'
 echo '▒▒   Installing X11..'
-sudo pacman -S --noconfirm --needed xorg xorg-xinit xorg-xinput &> /dev/null
+sudo pacman -S --noconfirm --needed xorg xorg-xinit xorg-xinput &> ~/install.log
 echo '▒▒   Installing Wayland support..'
-sudo pacman -S --noconfirm --needed xorg-wayland qt5-wayland qt6-wayland &> /dev/null
-# rsync ~/Github/arch/home/.xinitrc ~/ &> /dev/null
+sudo pacman -S --noconfirm --needed xorg-wayland qt5-wayland qt6-wayland &> ~/install.log
+# rsync ~/Github/arch/home/.xinitrc ~/ &> ~/install.log
 echo '▒▒'
 
 
@@ -92,8 +92,8 @@ echo '▒▒'
 
 echo '▒▒   [GPU]'
 echo '▒▒   Installing NVIDIA drivers..'
-sudo pacman -S --noconfirm --needed nvidia nvidia-settings nvidia-utils lib32-nvidia-utils &> /dev/null
-sudo pacman -S --noconfirm --needed vulkan-icd-loader lib32-vulkan-icd-loader &> /dev/null
+sudo pacman -S --noconfirm --needed nvidia nvidia-settings nvidia-utils lib32-nvidia-utils &> ~/install.log
+sudo pacman -S --noconfirm --needed vulkan-icd-loader lib32-vulkan-icd-loader &> ~/install.log
 echo '▒▒'
 
 
@@ -101,11 +101,11 @@ echo '▒▒'
 
 echo '▒▒   [Login Manager]'
 echo '▒▒   Installing SDDM..'
-sudo pacman -S --noconfirm sddm phonon-qt5-vlc &> /dev/null
-sudo pacman -S --noconfirm gst-libav gst-plugins-good qt5-quickcontrols qt5-graphicaleffects qt5-multimedia &> /dev/null
-sudo rsync -r ~/Github/aerial-sddm-theme/ /usr/share/sddm/themes/rd9x &> /dev/null
-sudo rsync -r ~/Github/arch/etc/sddm.conf.d/ /etc/sddm.conf.d &> /dev/null
-sudo systemctl enable sddm.service &> /dev/null
+sudo pacman -S --noconfirm sddm phonon-qt5-vlc &> ~/install.log
+sudo pacman -S --noconfirm gst-libav gst-plugins-good qt5-quickcontrols qt5-graphicaleffects qt5-multimedia &> ~/install.log
+sudo rsync -r ~/Github/aerial-sddm-theme/ /usr/share/sddm/themes/rd9x &> ~/install.log
+sudo rsync -r ~/Github/arch/etc/sddm.conf.d/ /etc/sddm.conf.d &> ~/install.log
+sudo systemctl enable sddm.service &> ~/install.log
 echo '▒▒'
 
 
@@ -113,19 +113,19 @@ echo '▒▒'
 
 echo '▒▒   [Window Manager]'
 echo '▒▒   Installing Qtile, Picom, Kitty, Dunst and Rofi..'
-yay -S --noconfirm --needed --mflags "--nocheck" qtile-git qtile-extras-git &> /dev/null
-sudo pacman -S --noconfirm --needed picom kitty rofi dunst &> /dev/null
-rsync -r ~/Github/arch/home/config/kitty/ ~/.config/kitty &> /dev/null
-rsync -r ~/Github/arch/home/config/picom/ ~/ &> /dev/null
-rsync -r ~/Github/arch/home/config/qtile/ ~/.config/qtile &> /dev/null
-rsync -r ~/Github/arch/home/config/rofi/ ~/.config/rofi &> /dev/null
-chmod +x ~/.config/qtile/autostart.sh &> /dev/null
-python -m py_compile ~/.config/qtile/config.py &> /dev/null
+yay -S --noconfirm --needed --mflags "--nocheck" qtile-git qtile-extras-git &> ~/install.log
+sudo pacman -S --noconfirm --needed picom kitty rofi dunst &> ~/install.log
+rsync -r ~/Github/arch/home/config/kitty/ ~/.config/kitty &> ~/install.log
+rsync -r ~/Github/arch/home/config/picom/ ~/ &> ~/install.log
+rsync -r ~/Github/arch/home/config/qtile/ ~/.config/qtile &> ~/install.log
+rsync -r ~/Github/arch/home/config/rofi/ ~/.config/rofi &> ~/install.log
+chmod +x ~/.config/qtile/autostart.sh &> ~/install.log
+python -m py_compile ~/.config/qtile/config.py &> ~/install.log
 echo '▒▒   Installing Nautilus, Nitrogen, Networkmanager and Dunst..'
-sudo pacman -S --noconfirm --needed nautilus sushi seahorse xfce4-settings nitrogen networkmanager dunst xdg-user-dirs-gtk xdg-desktop-portal xdg-desktop-portal-gtk &> /dev/null
-rsync -r ~/Github/arch/home/Pictures/ ~/Pictures &> /dev/null
-rsync -r ~/Github/arch/home/config/dunst/ ~/.config/dunst &> /dev/null
-rsync -r ~/Github/arch/home/config/xfce4/ ~/.config/xfce4 &> /dev/null
+sudo pacman -S --noconfirm --needed nautilus sushi seahorse xfce4-settings nitrogen networkmanager dunst xdg-user-dirs-gtk xdg-desktop-portal xdg-desktop-portal-gtk &> ~/install.log
+rsync -r ~/Github/arch/home/Pictures/ ~/Pictures &> ~/install.log
+rsync -r ~/Github/arch/home/config/dunst/ ~/.config/dunst &> ~/install.log
+rsync -r ~/Github/arch/home/config/xfce4/ ~/.config/xfce4 &> ~/install.log
 echo '▒▒'
 
 
@@ -136,10 +136,10 @@ read -p "▒▒   Install keyd? (y/N) " answer
 case ${answer:0:1} in
     y|Y )
 	echo '▒▒   Installing..'
-    sudo pacman -S --noconfirm --needed keyd &> /dev/null
-    sudo rsync -r ~/Github/arch/etc/keyd/ /etc/keyd &> /dev/null
-    systemctl enable keyd &> /dev/null
-    systemctl start keyd &> /dev/null
+    sudo pacman -S --noconfirm --needed keyd &> ~/install.log
+    sudo rsync -r ~/Github/arch/etc/keyd/ /etc/keyd &> ~/install.log
+    systemctl enable keyd &> ~/install.log
+    systemctl start keyd &> ~/install.log
     ;;
     * )
 	echo '▒▒   skipped'
@@ -163,7 +163,7 @@ echo '▒▒'
 
 echo '▒▒   [Cursor]'
 echo '▒▒   Installing Qogir Cursor..'
-yay -S --noconfirm --needed qogir-cursor-theme-git &> /dev/null
+yay -S --noconfirm --needed qogir-cursor-theme-git &> ~/install.log
 echo '▒▒'
 
 
@@ -171,7 +171,7 @@ echo '▒▒'
 
 echo '▒▒   [Icons]'
 echo '▒▒   Installing Papirus Icons..'
-sudo pacman -S --noconfirm --needed papirus-icon-theme &> /dev/null
+sudo pacman -S --noconfirm --needed papirus-icon-theme &> ~/install.log
 echo '▒▒'
 
 
@@ -179,19 +179,19 @@ echo '▒▒'
 
 echo '▒▒   [Theme]'
 echo '▒▒   Installing White-Sur, Breeze and Adwaita..'
-sudo pacman -S --noconfirm --needed breeze breeze-gtk gnome-themes-extra qt5ct qt6-base lxappearance &> /dev/null
-cd ~/Github/WhiteSur-gtk-theme &> /dev/null
-./install.sh &> /dev/null
-./install.sh -N stable &> /dev/null
-./install.sh -l &> /dev/null
-./tweaks.sh -f alt &> /dev/null
-rsync ~/Github/arch/home/.gtkrc-2.0.mine ~/ &> /dev/null
-rsync ~/Github/arch/home/.gtkrc-2.0 ~/ &> /dev/null
-rsync -r ~/Github/arch/home/config/fontconfig/ ~/.config/fontconfig &> /dev/null
-rsync -r ~/Github/arch/home/config/gtk-3.0/ ~/.config/gtk-3.0 &> /dev/null
-rsync -r ~/Github/arch/home/config/gtk-4.0/ ~/.config/gtk-4.0 &> /dev/null
-rsync -r ~/Github/arch/home/config/qt5ct/ ~/.config/qt5ct &> /dev/null
-sudo rsync ~/Github/arch/etc/environment /etc &> /dev/null
+sudo pacman -S --noconfirm --needed breeze breeze-gtk gnome-themes-extra qt5ct qt6-base lxappearance &> ~/install.log
+cd ~/Github/WhiteSur-gtk-theme &> ~/install.log
+./install.sh &> ~/install.log
+./install.sh -N stable &> ~/install.log
+./install.sh -l &> ~/install.log
+./tweaks.sh -f alt &> ~/install.log
+rsync ~/Github/arch/home/.gtkrc-2.0.mine ~/ &> ~/install.log
+rsync ~/Github/arch/home/.gtkrc-2.0 ~/ &> ~/install.log
+rsync -r ~/Github/arch/home/config/fontconfig/ ~/.config/fontconfig &> ~/install.log
+rsync -r ~/Github/arch/home/config/gtk-3.0/ ~/.config/gtk-3.0 &> ~/install.log
+rsync -r ~/Github/arch/home/config/gtk-4.0/ ~/.config/gtk-4.0 &> ~/install.log
+rsync -r ~/Github/arch/home/config/qt5ct/ ~/.config/qt5ct &> ~/install.log
+sudo rsync ~/Github/arch/etc/environment /etc &> ~/install.log
 echo '▒▒'
 
 
@@ -199,8 +199,8 @@ echo '▒▒'
 
 echo '▒▒   [Font]'
 echo '▒▒   Installing font..'
-sudo pacman -S --noconfirm --needed noto-fonts noto-fonts-cjk noto-fonts-emoji &> /dev/null
-yay -S --noconfirm --needed ttf-comfortaa &> /dev/null
+sudo pacman -S --noconfirm --needed noto-fonts noto-fonts-cjk noto-fonts-emoji &> ~/install.log
+yay -S --noconfirm --needed ttf-comfortaa &> ~/install.log
 sudo pacman -S nerd-fonts
 echo '▒▒'
 clear
@@ -221,7 +221,7 @@ echo '▒▒'
 
 echo '▒▒   [Software]'
 echo '▒▒   Installing Firefox, Flameshot, Wine and Secrets..'
-sudo pacman -S --noconfirm --needed firefox secrets flameshot wine &> /dev/null
+sudo pacman -S --noconfirm --needed firefox secrets flameshot wine &> ~/install.log
 
 
 # ~~ install steam
@@ -231,7 +231,7 @@ read -p "▒▒   Install Steam? (y/N) " answer
 case ${answer:0:1} in
     y|Y )
 	echo '▒▒   Installing Steam, Gamemode and Mangohud..'
-	sudo pacman -S --noconfirm --needed steam gamemode mangohud &> /dev/null
+	sudo pacman -S --noconfirm --needed steam gamemode mangohud &> ~/install.log
 	echo '▒▒   done'
 	echo '▒▒'
     ;;
@@ -249,8 +249,8 @@ read -p "▒▒   Install Discord, Teamspeak? (y/N) " answer
 case ${answer:0:1} in
     y|Y )
 	echo '▒▒   Installing..'
-	sudo pacman -S --noconfirm --needed discord &> /dev/null
-	sudo pacman -S --noconfirm --needed teamspeak3 &> /dev/null
+	sudo pacman -S --noconfirm --needed discord &> ~/install.log
+	sudo pacman -S --noconfirm --needed teamspeak3 &> ~/install.log
 	echo '▒▒   done'
 	echo '▒▒'
     ;;
@@ -268,7 +268,7 @@ read -p "▒▒   Install Thunderbird? (y/N) " answer
 case ${answer:0:1} in
     y|Y )
 	echo '▒▒   Installing..'
-	sudo pacman -S --noconfirm --needed thunderbird protonmail-bridge &> /dev/null
+	sudo pacman -S --noconfirm --needed thunderbird protonmail-bridge &> ~/install.log
 	echo '▒▒   done'
 	echo '▒▒'
     ;;
@@ -286,7 +286,7 @@ read -p "▒▒   Install Gimp? (y/N) " answer
 case ${answer:0:1} in
     y|Y )
 	echo '▒▒   Installing..'
-	sudo pacman -S --noconfirm --needed gimp &> /dev/null
+	sudo pacman -S --noconfirm --needed gimp &> ~/install.log
 	echo '▒▒   done'
 	echo '▒▒'
     ;;
@@ -304,7 +304,7 @@ read -p "▒▒   Install Figma? (y/N) " answer
 case ${answer:0:1} in
     y|Y )
 	echo '▒▒   Installing..'
-	sudo pacman -S --noconfirm --needed figma-linux &> /dev/null
+	sudo pacman -S --noconfirm --needed figma-linux &> ~/install.log
 	echo '▒▒   done'
 	echo '▒▒'
     ;;
@@ -322,7 +322,7 @@ read -p "▒▒   Install VS Code? (y/N) " answer
 case ${answer:0:1} in
     y|Y )
 	echo '▒▒   Installing..'
-	sudo pacman -S --noconfirm --needed code &> /dev/null
+	sudo pacman -S --noconfirm --needed code &> ~/install.log
 	echo '▒▒   done'
 	echo '▒▒'
     ;;
