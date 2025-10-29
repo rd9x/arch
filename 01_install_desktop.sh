@@ -17,7 +17,7 @@ echo '▒▒'
 echo '▒▒   Updating system..'
 sudo pacman -Syu &> ~/install.log
 echo '▒▒   Installing linux headers..'
-sudo pacman -S --noconfirm --needed base-devel linux-headers paccache &>> ~/install.log
+sudo pacman -S --noconfirm --needed base-devel linux-headers paccache rsync &>> ~/install.log
 echo '▒▒   Cloning github repos..'
 cd ~/Github &>> ~/install.log
 git clone https://aur.archlinux.org/yay.git &>> ~/install.log
@@ -47,7 +47,8 @@ echo '▒▒'
 
 echo '▒▒   [Shell]'
 echo '▒▒   Installing Starship, Neofetch, Ranger, ncdu, nano, tldr, ntfs-3g, figlet..'
-sudo pacman -S --noconfirm --needed starship neofetch ranger ncdu nano tldr ntfs-3g figlet &>> ~/install.log
+sudo pacman -S --noconfirm --needed starship ranger ncdu nano tldr ntfs-3g figlet &>> ~/install.log
+sudo yay -S --noconfirm --needed neofetch &>> ~/install.log
 echo '▒▒   Copying config files..'
 # rsync -r ~/Github/arch/home/config/htop/ ~/.config/htop &>> ~/install.log
 rsync -r ~/Github/arch/home/config/neofetch/ ~/.config/neofetch &>> ~/install.log
@@ -83,7 +84,7 @@ echo '▒▒   [Display Server]'
 echo '▒▒   Installing X11..'
 sudo pacman -S --noconfirm --needed xorg xorg-xinit xorg-xinput &>> ~/install.log
 echo '▒▒   Installing Wayland support..'
-sudo pacman -S --noconfirm --needed xorg-wayland qt5-wayland qt6-wayland &>> ~/install.log
+sudo pacman -S --noconfirm --needed xorg-xwayland qt5-wayland qt6-wayland &>> ~/install.log
 # rsync ~/Github/arch/home/.xinitrc ~/ &>> ~/install.log
 echo '▒▒'
 
@@ -101,8 +102,8 @@ echo '▒▒'
 
 echo '▒▒   [Login Manager]'
 echo '▒▒   Installing SDDM..'
-sudo pacman -S --noconfirm sddm phonon-qt5-vlc &>> ~/install.log
-sudo pacman -S --noconfirm gst-libav gst-plugins-good qt5-quickcontrols qt5-graphicaleffects qt5-multimedia &>> ~/install.log
+sudo pacman -S --noconfirm --needed sddm phonon-qt6-vlc &>> ~/install.log
+sudo pacman -S --noconfirm --needed gst-libav gst-plugins-good qt5-quickcontrols qt5-graphicaleffects qt5-multimedia &>> ~/install.log
 sudo rsync -r ~/Github/aerial-sddm-theme/ /usr/share/sddm/themes/rd9x &>> ~/install.log
 sudo rsync -r ~/Github/arch/etc/sddm.conf.d/ /etc/sddm.conf.d &>> ~/install.log
 sudo systemctl enable sddm.service &>> ~/install.log
