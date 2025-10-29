@@ -222,7 +222,7 @@ echo '▒▒'
 echo '▒▒   [Software]'
 echo '▒▒   Installing Firefox, Flameshot, Wine and Secrets..'
 sudo pacman -S --noconfirm --needed firefox secrets flameshot wine &> ~/install.log
-
+echo '▒▒'
 
 # ~~ install steam
 
