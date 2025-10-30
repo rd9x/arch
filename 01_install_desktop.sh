@@ -115,7 +115,7 @@ echo '▒▒'
 echo '▒▒   [Window Manager]'
 echo '▒▒   Installing Qtile, Picom, Kitty, Dunst and Rofi..'
 yay -S --noconfirm --needed --mflags "--nocheck" qtile-git qtile-extras-git &>> ~/install.log
-sudo pacman -S --noconfirm --needed picom kitty rofi dunst &>> ~/install.log
+sudo pacman -S --noconfirm --needed picom kitty rofi dunst python-psutil &>> ~/install.log
 rsync -r ~/Github/arch/home/config/kitty/ ~/.config/kitty &>> ~/install.log
 rsync -r ~/Github/arch/home/config/picom/ ~/.config/picom &>> ~/install.log
 rsync -r ~/Github/arch/home/config/qtile/ ~/.config/qtile &>> ~/install.log
