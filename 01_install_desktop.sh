@@ -86,8 +86,8 @@ echo '▒▒'
 
 echo '▒▒   [Display Server]'
 echo '▒▒   Installing..'
-echo '▒▒   xorg, xorg-xinit, xorg-xinput, xorg-xwayland, qt5-wayland, qt6-wayland'
-sudo pacman -S --noconfirm --needed xorg xorg-xinit xorg-xinput xorg-xwayland qt5-wayland qt6-wayland &>> ~/install.log
+echo '▒▒   xorg, xorg-xinit, xorg-xinput, xorg-xwayland, xterm, qt5-wayland, qt6-wayland'
+sudo pacman -S --noconfirm --needed xorg xorg-xinit xorg-xinput xorg-xwayland xterm qt5-wayland qt6-wayland &>> ~/install.log
 # rsync ~/Github/arch/home/.xinitrc ~/ &>> ~/install.log
 echo '▒▒'
 
@@ -239,7 +239,8 @@ case ${answer:0:1} in
     y|Y )
 	echo '▒▒   Installing..'
   echo '▒▒   steam, gamemode, mangohud, proton-ge-custom-bin, protontricks, winetricks, retroarch, libretro-core-info, libretro-mgba'
-	sudo pacman -S --noconfirm --needed steam gamemode mangohud proton-ge-custom-bin protontricks winetricks retroarch libretro-core-info libretro-mgba &>> ~/install.log
+	sudo pacman -S --noconfirm --needed steam gamemode mangohud protontricks winetricks retroarch libretro-core-info libretro-mgba &>> ~/install.log
+	yay -S proton-ge-custom-bin &>> ~/install.log
 	echo '▒▒   done'
 	echo '▒▒'
     ;;
