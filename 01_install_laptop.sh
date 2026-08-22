@@ -1,5 +1,8 @@
 #!/bin/bash
 clear
+# ~~ update system, install linux headers and clone github repos
+sudo pacman -Syu &> ~/install.log
+clear
 echo
 echo '▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒'
 echo '▒▒  ____            _                  ▒▒'
@@ -10,13 +13,7 @@ echo '▒▒ |____/ \__, |___/\__\___|_| |_| |_| ▒▒'
 echo '▒▒        |___/                        ▒▒'
 echo '▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒'
 echo '▒▒'
-
-
-# ~~ update system, install linux headers and clone github repos
-
 echo '▒▒   Updating system..'
-sudo pacman -Syu &> ~/install.log
-
 echo '▒▒   Installing..'
 echo '▒▒   base-devel, linux-headers, pacman-contrib, git, rsync, wget, amd-ucode plasma '
 sudo pacman -S --noconfirm --needed base-devel linux-headers pacman-contrib git rsync wget amd-ucode plasma sddm-kcm &>> ~/install.log
@@ -46,7 +43,7 @@ echo '▒▒   ranger, btop, ncdu, nano, tldr, ntfs-3g, figlet, peek, zenity, yt
 sudo pacman -S --noconfirm --needed feh maim ffmpeg evince p7zip 7zip unrar dosfstools imagemagick gvfs vlc starship ranger btop ncdu nano tldr &>> ~/install.log
 sudo pacman -S --noconfirm --needed ntfs-3g figlet peek zenity btop ncdu nano tldr ntfs-3g figlet peek zenity yt-dlp yt-dlp-ejs vapoursynth &>> ~/install.log
 yay -S --noconfirm --needed neofetch
-echo '▒▒'
+clear
 echo '▒▒   Copying config files..'
 rsync -r ~/Github/arch/home/config/neofetch/ ~/.config/neofetch &>> ~/install.log
 rsync ~/Github/arch/home/config/starship.toml ~/.config &>> ~/install.log
